@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aeonik - Exact Shuffle body font */
+@font-face {
+  font-family: Aeonik;
+  src: url(https://shuffle.com/_assets/8169ddcf9d01f442b3acd689c97ffce8141c9c5b/_next/static/media/aeonikpro-regular.ccb6e851.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Aeonik;
+  src: url(https://shuffle.com/_assets/8169ddcf9d01f442b3acd689c97ffce8141c9c5b/_next/static/media/aeonikpro-medium.cbcd927f.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Aeonik;
+  src: url(https://shuffle.com/_assets/8169ddcf9d01f442b3acd689c97ffce8141c9c5b/_next/static/media/aeonikpro-bold.b55084ff.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Aeonik;
+  src: url(https://shuffle.com/_assets/8169ddcf9d01f442b3acd689c97ffce8141c9c5b/_next/static/media/aeonikpro-black.27f500ce.woff2) format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-shuffle: 'Aeonik', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0a0a0f;
+}
+
+body {
+  background: #0a0a0f;
+  color: white;
+  font-family: var(--font-shuffle);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a3e transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #2a2a3e;
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #3a3a4e;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #7717ff;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #7717ff;
+  color: white;
+}
+
+/* ProviderCarousel exact match styles */
+.ProviderCarousel_headingIcon__qC0pj { width: 20px; height: 20px; }
+.CarouselHeader_heading__9V3Z6 { font-family: Aeonik, sans-serif; }
+.CarouselHeader_navButton__abEBj:disabled { opacity: 0.4; pointer-events: none; }
+.Carousel_swipeContent__khffe { position: relative; }
+.CarouselSwipeContent_root__fR4aj { -ms-overflow-style: none; scrollbar-width: none; }
+.CarouselSwipeContent_root__fR4aj::-webkit-scrollbar { display: none; }
+.ProviderCard_ProviderCardWrapper__iGp3_ { flex: 0 0 auto; }
+.ProviderCard_providerCardBlock__Xa7vt { position: relative; overflow: hidden; }
+.ProviderCard_providerCardElement__isOHN { position: relative; width: 100%; height: 100%; }
+.Carousel_carouselFade__sQ5Du { background: linear-gradient(90deg, transparent, #0a0a0f 80%); }
+
+/* TallGameCard exact match */
+.TallGameCard_root__3v8oD { position: relative; }
+.TallGameCard_skeletonWrapper__2h6eU { position: absolute; inset: 0; }
+.SkeletonPlaceholder_root__XG1OL { position: absolute; inset: 0; background: #1a1a27; border-radius: 12px; overflow: hidden; }
+.SkeletonPlaceholder_imageVariant__yB1vX { aspect-ratio: 3/4; }
+.SkeletonPlaceholder_hasColor__m7Xq1 { --skeleton-color: #7717ff; }
+.SkeletonPlaceholder_placeholder__z4z8U { width: 100%; height: 100%; }
+.TallGameCard_skeletonClassName__p6b2x { border-radius: 12px; }
+.GameCardBorder_root__qX5pP { position: absolute; inset: 0; border-radius: 12px; overflow: hidden; }
+.GameCardBorder_buttonGroup__r4s2d { position: absolute; }
+.GameCardBorder_button__k7a9m { cursor: pointer; }
+.GameCardBorder_showOnHover__m2n4p { opacity: 0; }
+.group:hover .GameCardBorder_showOnHover__m2n4p { opacity: 1; }
+.GameCardBorder_squareButton__x8y3z { width: 28px; height: 28px; }
+
+/* GamesToolbar */
+.GamesToolbar_root__p2z4n { width: 100%; }
+.SearchInput_root__qX5pP { position: relative; }
+.SearchInput_iconWrapper__a1b2c { position: absolute; }
+.SearchInput_input__d4e5f { width: 100%; }
+.GamesToolbar_searchInputWrapper__v8c9x { flex: 1; }
+.GamesToolbar_filtersWrapper__x3y2z { display: flex; }
+.SelectMultiple_root__m9n8b { position: relative; }
+.SelectMultiple_button__k2l3m { cursor: pointer; }
+.SelectMultiple_dropdown__p9q8r { z-index: 30; }
+.Select_root__a1s2d { position: relative; }
+.Select_formWrapper__b3c4d { display: flex; align-items: center; }
+.Select_button__c5d6e { cursor: pointer; }
+.Select_dropdown__e7f8g { z-index: 30; }
+
+/* CardGrid */
+.CardGrid_cardGridWrapper__x9y8z { width: 100%; }
+.CardGrid_cardGrid__a1b2c { display: grid; }
+.CardGrid_cardGridElement__p3q4r { width: 100%; }
+.CardGrid_background__z1x2c { pointer-events: none; }
+.ShowMoreBackground_root__m4n5o { position: relative; }
+.ShowMore_button__a3b4c { cursor: pointer; }
+.CircularLoadingIndicator_root__c1d2e { border-top-color: white; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Flex helpers from original */
+.Flex_root__yC03I { display: flex; }
+.Flex_spaced__3mPSv { justify-content: space-between; }
+.Flex_wide__e2p5K { width: 100%; }
+.Flex_sm4__Nmuif { gap: 4px; }
+.Flex_center__D8twJ { align-items: center; justify-content: center; }
+.Heading_root__Z7xp1 { margin: 0; }
+.Heading_h3__GvMSB { font-size: 18px; font-weight: 700; }
+.TextLink_root__BkJn5 { text-decoration: none; }
+.LayoutContainer_root__p2z4n { width: 100%; }
+.LayoutContainer_root__YmW71 { width: 100%; max-width: 1920px; margin: 0 auto; }
+.LayoutContainer_row___4Cfc { display: flex; flex-direction: row; }
+.Header_navContainer__7H2Ay { height: 100%; }
+.HeaderLogo_mobileLogoWrapper__jgM7c, .HeaderLogo_desktopLogoWrapper__bmAcy { display: flex; align-items: center; }
+.HeaderWalletActions_navMenu__JyPzb { display: flex; align-items: center; }
+.HeaderLoginRegister_authButton__sLCuV { cursor: pointer; }
+.HeaderLoginRegister_transparentButton__4jkyV { background: transparent; }
+.ButtonVariants_root__EFlHO { cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+.ButtonVariants_buttonHeightMedium__PC3FX { height: 36px; }
+.ButtonVariants_buttonHeightXSmall__CLrw0 { height: 28px; }
+.ButtonVariants_tertiary__LojiE { background: #1e1e2e; border: 1px solid #2a2a3e; color: #8b8ba7; }
+.ButtonVariants_primary__zlUoe { background: #7717ff; color: white; border: 1px solid #7717ff; }
+.ButtonVariants_noTextWrap__oD6zC { white-space: nowrap; }
+.ButtonVariants_buttonContent__mRPrs { display: flex; align-items: center; gap: 6px; }
+.ButtonVariants_hasIcon__9cB6H { gap: 6px; }
+.ButtonVariants_tertiaryRound__Q9Q9d { border-radius: 9999px; background: #14141f; border: 1px solid #1e1e2e; }
+.HeaderWalletActions_btnContainer__NaMC3 { display: flex; align-items: center; gap: 8px; }
+.BalanceSelect_root__Pdpt2 { position: relative; }
+.BalanceSelect_selectContainer__xCM8V { position: relative; }
+.BalanceSelect_balanceBtn__a2IXa { cursor: pointer; }
+.CryptoIcon_root__FVB7K { width: 16px; height: 16px; }
+.IconValue_root__hDG8_ { display: flex; }
+.FormattedAmount_root__Vpi79 { font-variant-numeric: tabular-nums; }
+.BalanceSelect_amount__GdFUJ { font-weight: 700; }
+.BalanceSelect_arrow__48cRg { width: 12px; height: 12px; }
+.HeaderWalletActions_walletBtn__zd_WZ { cursor: pointer; }
+.HeaderWalletActions_walletBtnText__m9TA2 { font-weight: 700; }
+.Flex_sm5__iH98w { gap: 20px; }
+.HeaderWalletActions_userActions__g8cj4 { display: flex; }
+.IconMenu_root__1U8Mx { display: flex; align-items: center; }
+.IconMenu_menuWrapper__UDtAl { display: flex; gap: 4px; }
+.Tooltip_trigger__N4IYT { display: inline-flex; }
+.ButtonIcon_root__ettnD { display: flex; }
+.IconMenuItem_badgeWrapper__D_DHR { position: absolute; }
+.UserMenu_root___VZVV { position: relative; }
+.UserMenu_userMenuWrapper__2ECxj { cursor: pointer; display: flex; }
+.Avatar_root__zvy3z { border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.UserMenu_avatarButton__R2TFE { width: 36px; height: 36px; }
+.Avatar_background__DwIyy { background: #1e1e2e; }
+.ExpandMenuElement_menuWrapper__1GIcq { position: absolute; z-index: 50; }
+.ExpandMenuElement_expandMenu__uz55t { background: #1e1e2e; border: 1px solid #2a2a3e; border-radius: 12px; overflow: hidden; }
+.UserMenuVipCard_userMenuVipWrapper__C886j { display: block; }
+.UserMenuVipCard_name__dnXOc { display: flex; align-items: center; gap: 12px; }
+.UserMenuVipCard_username__tAS1m { font-weight: 700; }
+.UserMenuVipCard_lineBreak__VDweT { border: none; border-top: 1px solid #2a2a3e; margin: 12px 0; }
+.VipBadge_root__ozOvC { display: flex; align-items: center; gap: 6px; }
+.VipIcon_root__8kkPV { display: flex; }
+.ProgressBarSection_graph__BfTU0 { width: 100%; }
+.ProgressBarSection_graphContent__R0VwM { width: 100%; }
+.ProgressBarSection_progress__dk3_K { width: 100%; height: 6px; background: #2a2a3e; border-radius: 9999px; overflow: hidden; }
+.ProgressBarSection_skipBorder__6HHfI { border: none; }
+.ProgressBarSection_supportText__9fRTm { display: flex; justify-content: space-between; font-size: 11px; color: #8b8ba7; }
+.ProgressBarSection_tokenAmount__pYu5q { display: flex; }
+.UserMenuVipCard_progressBarContent__PxLVl { width: 100%; }
+.UserMenuVipCard_levelPercentage__fvTW8 { color: #8b8ba7; }
+.ExpandMenuElement_menuItem__Isfin { display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px 16px; font-size: 13px; color: #8b8ba7; transition: all 0.15s; cursor: pointer; text-align: left; background: transparent; border: none; }
+.ExpandMenuElement_menuItem__Isfin:hover { background: #2a2a3e; color: white; }
+.ExpandMenuElement_menuIcon__8Vlj8 { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; opacity: 0.7; }
+
+/* Home Tabs */
+.Home_wrapper__dZQnM { width: 100%; }
+.Tab_root__BVPOu { width: 100%; overflow-x: auto; scrollbar-width: none; }
+.Tab_root__BVPOu::-webkit-scrollbar { display: none; }
+.Tab_tabsContainer__n_T8O { display: flex; align-items: center; gap: 6px; padding: 4px; background: #14141f; border: 1px solid #1e1e2e; border-radius: 12px; width: fit-content; }
+.Tab_tab__QsESc { display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 16px; border-radius: 8px; font-size: 13px; font-weight: 700; white-space: nowrap; transition: all 0.2s; cursor: pointer; border: none; background: transparent; color: #8b8ba7; }
+.Tab_tab__QsESc:hover { background: #1e1e2e; color: white; }
+.Tab_active__d8K_Q { background: white !important; color: black !important; box-shadow: 0 2px 8px rgba(255,255,255,0.15); }
+.Tab_icon__64HgR { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; }
+.Tab_text__y05gE { margin: 0; }
+.Home_homeTabSectionSearch__x4fei { width: 100%; }
+.TextInput_formControlWrapper__iBF1i { width: 100%; }
+.InputWrapper_root__4rgbp { position: relative; display: flex; align-items: center; width: 100%; background: #14141f; border: 1px solid #1e1e2e; border-radius: 10px; height: 40px; }
+.TextInput_inputPrefix__Gveih { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+.Input_root__lWEbp { width: 100%; height: 100%; background: transparent; border: none; outline: none; color: white; font-size: 13px; padding-left: 40px; padding-right: 70px; }
+.Input_hasPrefix__CSfXf { padding-left: 40px; }
+.Input_hasRightIcon__iWAyU { padding-right: 70px; }
+.InputSuffix_root__oj7G6 { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); }
+.Home_searchHotkeyBadge__bjQiH { display: flex; }
+
+/* Auth Modal */
+.ModalContent_modalContent__rbnMN { position: relative; background: #0e0e15; border-radius: 16px; overflow: hidden; }
+.GlobalModal_authModalContent__wj48B { max-width: 1000px; width: 100%; }
+.AuthModal_desktop__UyUut { display: flex; width: 100%; height: 100%; }
+.AuthModal_authModalLeft__cZNrH { width: 50%; position: relative; overflow: hidden; background: #0a0a0f; display: flex; flex-direction: column; }
+.AuthModal_backgroundImage__HSV1e { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.AuthModal_backgroundGradient__R6sGB { position: absolute; inset: 0; background: linear-gradient(to top, #0a0a0f, rgba(10,10,15,0.4), rgba(0,0,0,0.3)); }
+.AuthModal_logo__Ididm { position: absolute; top: 32px; left: 32px; height: 28px; }
+.AuthModal_terms__a6xZU { position: absolute; bottom: 32px; left: 32px; right: 32px; color: rgba(255,255,255,0.7); font-size: 12px; line-height: 1.5; text-align: center; }
+.AuthModal_authModalRight__Lo6zo { width: 50%; background: #121214; display: flex; flex-direction: column; justify-content: center; }
+.AuthModal_authModalInner__IuOJ2 { padding: 32px 40px; }
+.RegisterMoreDetails_root___2Y1_ { width: 100%; }
+.Flex_column__BLL17 { flex-direction: column; }
+.Flex_lg1__ImBWi { gap: 4px; }
+.Flex_md2__0Smxc { gap: 16px; }
+.ModalHeader_root__EfKAa { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+.ModalHeader_heading__oJ1V8 { font-size: 20px; font-weight: 700; color: white; }
+.Heading_center__7_k8J { text-align: center; }
+.ModalHeader_text__00fWH { color: #8b8ba7; font-size: 13px; line-height: 1.5; }
+.TextInput_labelGroup__ZxQjE { margin-bottom: 8px; }
+.LabelBlock_root__0vEsV { display: flex; }
+.TextInput_labelBlock__iLyI1 { display: flex; }
+.TextInput_label__J8l6V { color: white; font-size: 13px; font-weight: 500; }
+

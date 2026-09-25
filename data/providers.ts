@@ -1,0 +1,58 @@
+export interface Provider {
+  id: string;
+  name: string;
+  slug: string;
+  imageId: string; // imgix id
+  href: string;
+}
+
+export const providers: Provider[] = [
+  { id: "pragmatic-play", name: "Pragmatic Play", slug: "pragmatic-play", imageId: "bea1d996-f804-4d0e-a2d4-ed1cf1998235", href: "/casino/providers/pragmatic-play" },
+  { id: "penguin-king", name: "Penguin King", slug: "penguin-king", imageId: "2326e8f4-f9f6-42a3-a64a-d3d65f7bc7fc", href: "/casino/providers/penguin-king" },
+  { id: "hacksaw", name: "Hacksaw Gaming", slug: "hacksaw", imageId: "3f615bdc-b69d-42c0-8e83-1681d719af54", href: "/casino/providers/hacksaw" },
+  { id: "evolution", name: "Evolution Gaming", slug: "evolution", imageId: "38754033-94bf-44bc-839b-497ea031b521", href: "/casino/providers/evolution" },
+  { id: "nolimit-city", name: "Nolimit City", slug: "nolimit-city", imageId: "91709016-b54b-4e82-911b-dffb4f2c5c53", href: "/casino/providers/nolimit-city" },
+  { id: "backseatgaming", name: "Backseat Gaming", slug: "backseatgaming", imageId: "a59a9f9a-7fe6-49fa-b796-fe795c46f961", href: "/casino/providers/backseatgaming" },
+  { id: "novomatic", name: "Novomatic", slug: "novomatic", imageId: "e66d2109-ecc3-4c18-83d3-253ec299d4ef", href: "/casino/providers/novomatic" },
+  { id: "peter-and-sons", name: "Peter & Sons", slug: "peter-and-sons", imageId: "41cd7e5e-4b20-478b-a0b1-d3740a2e63bd", href: "/casino/providers/peter-and-sons" },
+  { id: "elk", name: "Elk", slug: "elk", imageId: "b2515d60-3be8-4bbb-9c2e-04bb15560c57", href: "/casino/providers/elk" },
+  { id: "endorphina", name: "Endorphina", slug: "endorphina", imageId: "8c2da642-a1e2-4c9b-9880-304152bd9aeb", href: "/casino/providers/endorphina" },
+  { id: "pragmatic-play-live", name: "Pragmatic Play Live", slug: "pragmatic-play-live", imageId: "d3ab714f-bf61-41a9-b709-b6c3baf12e15", href: "/casino/providers/pragmatic-play-live" },
+  { id: "shady-lady", name: "ShadyLady", slug: "shady-lady", imageId: "610d2968-e6d8-40b2-a962-b28e42fe0941", href: "/casino/providers/shady-lady" },
+  { id: "shuffle-games", name: "Shuffle Games", slug: "shuffle-games", imageId: "347ddd8f-cd00-4564-a6be-fd03c1197755", href: "/casino/providers/shuffle-games" },
+  { id: "bgmng", name: "BGaming", slug: "bgmng", imageId: "758c2382-3aad-4a19-9ea7-419179da711f", href: "/casino/providers/bgmng" },
+  { id: "relax", name: "Relax Gaming", slug: "relax", imageId: "e4b894ee-d113-49f1-932c-3dce911881c3", href: "/casino/providers/relax" },
+  { id: "maxxilabs", name: "Maxxi Labs", slug: "maxxilabs", imageId: "15cf03e9-81ae-4014-9e22-71b5f1a111c8", href: "/casino/providers/maxxilabs" },
+  { id: "just-slots", name: "Just Slots", slug: "just-slots", imageId: "0b1cdbae-57d7-425a-af24-b2beef2456b3", href: "/casino/providers/just-slots" },
+  { id: "push-gaming", name: "Push Gaming", slug: "push-gaming", imageId: "5198358b-6292-42fe-9c76-a9a372b5f9c0", href: "/casino/providers/push-gaming" },
+  { id: "155-io", name: "155.io", slug: "155-io", imageId: "90e976b4-7224-46c2-874d-fb49796e10f5", href: "/casino/providers/155-io" },
+  { id: "7rings", name: "7rings", slug: "7rings", imageId: "d057de1a-0857-4d9e-94e7-bf82eec942a8", href: "/casino/providers/7rings" },
+  { id: "exco", name: "EXCO", slug: "exco", imageId: "57ff0003-72bf-45c2-9d9f-dc64690ba9a6", href: "/casino/providers/exco" },
+  { id: "clutch-gaming", name: "Clutch Gaming", slug: "clutch-gaming", imageId: "0b7579fd-7240-45f7-86db-593a4decccb3", href: "/casino/providers/clutch-gaming" },
+  { id: "voltent", name: "Voltent", slug: "voltent", imageId: "c36db26d-09ee-4723-9038-bc9a5205bc6a", href: "/casino/providers/voltent" },
+  { id: "trustygaming", name: "Trusty Gaming", slug: "trustygaming", imageId: "979646d0-7925-47be-8b7f-0fb4fcb67b81", href: "/casino/providers/trustygaming" },
+  { id: "netent", name: "Netent", slug: "netent", imageId: "833f175f-6997-4a1f-a980-24a02256891d", href: "/casino/providers/netent" },
+  { id: "aceroll", name: "Aceroll", slug: "aceroll", imageId: "a30009cc-e03f-4021-ad88-94d0c0ae2563", href: "/casino/providers/aceroll" },
+  { id: "pgsoft", name: "PG Soft", slug: "pgsoft", imageId: "c06f4302-d8f8-480b-9c81-09833d940937", href: "/casino/providers/pgsoft" },
+  { id: "redtiger", name: "Red Tiger", slug: "redtiger", imageId: "fd6ecba5-f248-4cdc-8249-c441c02277cd", href: "/casino/providers/redtiger" },
+  { id: "onetouch", name: "OneTouch", slug: "onetouch", imageId: "bb01bbb7-2bdb-4c8a-b67e-4663bb9fea50", href: "/casino/providers/onetouch" },
+  { id: "winfast", name: "Win Fast", slug: "winfast", imageId: "2eb08ec7-2812-4538-ac52-588503b53b8e", href: "/casino/providers/winfast" },
+  { id: "gaming-corps", name: "Gaming Corps", slug: "gaming-corps", imageId: "6819e3f4-dcd7-4a9c-9e0d-6e5f4e02c650", href: "/casino/providers/gaming-corps" },
+  { id: "big-time-gaming", name: "Big Time Gaming", slug: "big-time-gaming", imageId: "2f9fb62b-5281-47a6-ba67-ddda5f9bd1aa", href: "/casino/providers/big-time-gaming" },
+  { id: "pineappleplay", name: "Pineapple Play", slug: "pineappleplay", imageId: "193ccde2-421b-47d5-9cb0-e1a6fa5363e6", href: "/casino/providers/pineappleplay" },
+  { id: "goodtimesstudios", name: "Goodtimes Studios", slug: "goodtimesstudios", imageId: "64bf83a6-2a78-4182-ab38-f37c3f27580f", href: "/casino/providers/goodtimesstudios" },
+  { id: "1spin4win", name: "1spin4win", slug: "1spin4win", imageId: "327d0fca-e106-4f82-864f-13240497b1a5", href: "/casino/providers/1spin4win" },
+  { id: "alohagaming", name: "Aloha Gaming", slug: "alohagaming", imageId: "b9c69655-926c-4f29-81cb-96fef4826986", href: "/casino/providers/alohagaming" },
+  { id: "kitsunegaming", name: "Kitsune Gaming", slug: "kitsunegaming", imageId: "69ebab63-d4a5-44a1-97c5-059a120d6c80", href: "/casino/providers/kitsunegaming" },
+  { id: "delulu", name: "Delulu", slug: "delulu", imageId: "df9173cb-32e9-48ad-a8da-0916b59992b9", href: "/casino/providers/delulu" },
+  { id: "playnetic", name: "Playnetic", slug: "playnetic", imageId: "fd6bac3a-a71b-42db-9df4-867177c4746d", href: "/casino/providers/playnetic" },
+  { id: "truelab", name: "True Labs", slug: "truelab", imageId: "e1b1c551-841d-4dff-aadd-2f78ffa3e981", href: "/casino/providers/truelab" },
+  { id: "avatarux", name: "AvatarUX", slug: "avatarux", imageId: "c29e2e93-eb3d-44f2-ae57-b80886b9ac5d", href: "/casino/providers/avatarux" },
+  { id: "printstudios", name: "Print Studios", slug: "printstudios", imageId: "7ed7049f-c1ea-4bf7-b348-7ae0c7d686eb", href: "/casino/providers/printstudios" },
+  { id: "thunderkick", name: "Thunderkick", slug: "thunderkick", imageId: "92f8dbf0-cd43-4a49-941a-33cb9482f576", href: "/casino/providers/thunderkick" },
+  { id: "fourleafgaming", name: "Four Leaf Gaming", slug: "fourleafgaming", imageId: "d8f06071-47b0-4a84-ae94-404541b611c9", href: "/casino/providers/fourleafgaming" },
+  { id: "betsoft", name: "Betsoft", slug: "betsoft", imageId: "d08885df-d21b-4b3f-85bb-9d24505c43a3", href: "/casino/providers/betsoft" },
+  { id: "bullsharkgames", name: "Bullshark Games", slug: "bullsharkgames", imageId: "128f8cba-d3fb-498a-9163-616b266d614a", href: "/casino/providers/bullsharkgames" },
+  { id: "fantasma", name: "Fantasma", slug: "fantasma", imageId: "08e4d5b3-14cc-4c9c-bc77-27e1d9c45281", href: "/casino/providers/fantasma" },
+  { id: "nownow", name: "Nownow", slug: "nownow", imageId: "5a71a8e9-c810-46e3-867f-f95e0bd1847b", href: "/casino/providers/nownow" },
+];
