@@ -1,5 +1,5 @@
 # Shuffle Casino 
-
+<img width="1680" height="941" alt="Screenshot 2026-09-27 at 10 08 19" src="https://github.com/user-attachments/assets/3bf565b3-78a5-4747-850e-f76a3494e2dd" />
 ## Tech Stack
 - Next.js 14 + TypeScript (App Router)
 - Tailwind CSS
