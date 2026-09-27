@@ -1,5 +1,5 @@
 # Shuffle Casino 
-![Uploading Screenshot 2026-09-27 at 10.09.32.png…]()
+<img width="1680" height="938" alt="Screenshot 2026-09-27 at 10 09 32" src="https://github.com/user-attachments/assets/fcd52930-cfac-43a3-8f66-8d7998ada424" />
 
 ## Tech Stack
 - Next.js 14 + TypeScript (App Router)
