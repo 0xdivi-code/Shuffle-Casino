@@ -1,42 +1,58 @@
 import { cn } from '@/lib/admin/utils';
 
 /**
- * Admin branding — uses the same logo assets as the player-facing frontend
- * (`public/icons/logo-small.svg` mark, `public/icons/logo.svg` full wordmark).
+ * Admin branding — uses the official Shuffle wordmark from shuffle.com
+ * (same image the player-facing frontend renders in its header), with an
+ * offline fallback to the bundled copy at /icons/logo.svg.
  */
 export function AdminLogo({ collapsed = false }: { collapsed?: boolean }) {
-  return (
-    <span className="flex items-center gap-2.5">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
+  if (collapsed) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
       <img
         src="/icons/logo-small.svg"
         alt="Shuffle"
         className="h-8 w-8 shrink-0 drop-shadow-[0_4px_14px_rgba(139,92,246,.45)]"
         draggable={false}
       />
-      {!collapsed && (
-        <span className="flex flex-col leading-none">
-          <span className="text-[14px] font-bold tracking-tight text-adm-text">Shuffle</span>
-          <span className="mt-0.5 text-[9px] font-semibold uppercase tracking-[.18em] text-adm-gold">Operator Console</span>
-        </span>
-      )}
+    );
+  }
+  return (
+    <span className="flex min-w-0 flex-col gap-1">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="https://shuffle.com/icons/logo.svg"
+        alt="Shuffle"
+        className="h-[22px] w-auto shrink-0"
+        draggable={false}
+        onError={e => {
+          const t = e.currentTarget;
+          if (!t.src.includes('/icons/logo.svg')) t.src = '/icons/logo.svg';
+        }}
+      />
+      <span className="text-[8.5px] font-semibold uppercase tracking-[.22em] text-adm-gold">
+        Operator Console
+      </span>
     </span>
   );
 }
 
 export function AdminLogoFull({ className }: { className?: string }) {
   return (
-    <div className={cn('flex items-center gap-3', className)}>
+    <div className={cn('flex flex-col gap-1.5', className)}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/icons/logo-small.svg"
+        src="https://shuffle.com/icons/logo.svg"
         alt="Shuffle"
-        className="h-10 w-10 drop-shadow-[0_6px_18px_rgba(139,92,246,.5)]"
+        className="h-[28px] w-auto drop-shadow-[0_6px_18px_rgba(139,92,246,.4)]"
         draggable={false}
+        onError={e => {
+          const t = e.currentTarget;
+          if (!t.src.includes('/icons/logo.svg')) t.src = '/icons/logo.svg';
+        }}
       />
-      <span className="flex flex-col leading-none">
-        <span className="text-[16px] font-bold tracking-tight text-adm-text">Shuffle Admin</span>
-        <span className="mt-1 text-[9px] font-semibold uppercase tracking-[.18em] text-adm-gold">Operator Console</span>
+      <span className="text-[9px] font-semibold uppercase tracking-[.22em] text-adm-gold">
+        Operator Console
       </span>
     </div>
   );
