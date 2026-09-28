@@ -7,6 +7,11 @@ export const metadata: Metadata = {
     template: '%s · Shuffle Admin',
   },
   description: 'Casino operator control center: players, finance, games, risk, compliance and more. Demo environment with simulated data.',
+  icons: {
+    icon: '/icons/logo-small.svg',
+    shortcut: '/icons/logo-small.svg',
+    apple: '/icons/logo-small.svg',
+  },
   robots: { index: false, follow: false },
 };
 
