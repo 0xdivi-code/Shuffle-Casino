@@ -261,3 +261,63 @@ button:focus-visible, a:focus-visible {
 .TextInput_labelBlock__iLyI1 { display: flex; }
 .TextInput_label__J8l6V { color: white; font-size: 13px; font-weight: 500; }
 
+
+/* ============================================================
+   Casino Admin — global styles
+   ============================================================ */
+.font-admin { font-feature-settings: "cv02","cv03","cv04","cv11"; }
+
+.admin-root { background:
+  radial-gradient(1200px 500px at 15% -10%, rgba(139,92,246,.07), transparent 60%),
+  radial-gradient(900px 420px at 85% -10%, rgba(242,185,59,.045), transparent 60%),
+  #0a0d14; }
+
+/* slim scrollbars for the admin app */
+.admin-root ::-webkit-scrollbar { width: 8px; height: 8px; }
+.admin-root ::-webkit-scrollbar-track { background: transparent; }
+.admin-root ::-webkit-scrollbar-thumb { background: #2d3650; border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
+.admin-root ::-webkit-scrollbar-thumb:hover { background: #3a4566; background-clip: padding-box; }
+.admin-root * { scrollbar-width: thin; scrollbar-color: #2d3650 transparent; }
+
+/* skeleton shimmer surface */
+.adm-skeleton {
+  background: linear-gradient(100deg, #151b2b 40%, #1c2438 50%, #151b2b 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+/* glass card */
+.adm-glass {
+  background: linear-gradient(180deg, rgba(24,30,48,.72), rgba(19,24,38,.66));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139,147,171,.12);
+}
+
+/* number tabular figures for data-heavy UI */
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* subtle inner top highlight on cards */
+.adm-card-highlight { position: relative; }
+.adm-card-highlight::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(233,236,245,.14), transparent);
+  border-radius: inherit;
+}
+
+/* focus ring */
+.adm-focus:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 1px; }
+
+/* table row hover sheen */
+.adm-row-hover { transition: background-color .12s ease; }
+.adm-row-hover:hover { background: rgba(139,92,246,.045); }
+
+/* soft chip ring used on live indicator */
+.live-dot { box-shadow: 0 0 0 3px rgba(52,211,153,.15); }
+
+/* recharts dark overrides */
+.admin-root .recharts-cartesian-axis-tick text { fill: #5b6478; font-size: 11px; }
+.admin-root .recharts-cartesian-grid line { stroke: rgba(139,147,171,.09); }
+.admin-root .recharts-default-legend { color: #8a93ab; }
+
+/* cmdk scroll area */
+.adm-cmdk [cmdk-list] { max-height: 380px; }

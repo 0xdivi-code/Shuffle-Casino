@@ -17,21 +17,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
-  devIndicators: {
-    buildActivity: false,
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/api/image-proxy',
-        destination: '/api/image-proxy',
-      }
-    ]
-  },
   webpack: (config) => {
-    // Suppress MetaMask errors from extension
-    const originalEntry = config.entry;
     return config;
-  }
+  },
 };
 module.exports = nextConfig;

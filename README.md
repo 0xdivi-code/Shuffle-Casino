@@ -1,86 +1,74 @@
-# Shuffle Casino 
-<img width="1680" height="938" alt="Screenshot 2026-09-27 at 10 09 32" src="https://github.com/user-attachments/assets/fcd52930-cfac-43a3-8f66-8d7998ada424" />
+# Shuffle Casino — Frontend + Operator Console
+
+This repository contains two products:
+
+1. **Player-facing casino** (`/`) — the crypto casino & sportsbook lobby.
+2. **Casino Admin Panel** (`/admin`) — a production-quality operator control center.
+
+<img width="1680" alt="Casino Admin Panel" src="https://github.com/user-attachments/assets/fcd52930-cfac-43a3-8f66-8d7998ba89b4" />
+
+## Casino Admin Panel (`/admin`)
+
+A dark-first, enterprise-grade operator platform covering the full casino stack:
+
+| Module | Highlights |
+| --- | --- |
+| **Dashboard** | 13 KPIs with sparklines, revenue/GGR/NGR/P&L charts, deposits vs withdrawals, top games & providers, real-time activity feed |
+| **Players** | Advanced table (search, filters, sorting, pagination, bulk actions, CSV export), full profile with 11 tabs (Overview / Wallet / Transactions / Bets / Bonuses / KYC / Sessions / Devices / Responsible Gaming / Notes / Activity Log) |
+| **Finance** | Deposits, withdrawals with approval workflow (review drawer, batch approve, escalate), transactions ledger with detail drawers, wallets, chargebacks |
+| **Casino** | Game manager with grid/table views, featured toggles, lobby reordering, RTP configuration, providers, categories, jackpots |
+| **Sportsbook** | Sports, events, markets, odds, live betting, settlement queue, suspended markets |
+| **Bonuses & VIP** | Campaigns, welcome/free spins/cashback, promo codes, VIP levels & tiers, loyalty points, rewards catalog |
+| **Marketing** | Banners, popups, notifications, email & push campaigns, referrals |
+| **Affiliates** | Accounts, applications, tracking, commissions, payouts |
+| **Reports** | Revenue/GGR-NGR/player/game/provider/payment/bonus/affiliate/financial reports with charts & exports |
+| **Risk & Security** | Fraud monitoring, suspicious activity, duplicate/multi-account detection, blocklists, session management, risk rules |
+| **Compliance** | KYC review queue with approve/reject drawers, AML alerts, self-exclusion, deposit/betting limits |
+| **CMS** | Homepage rails, pages, menus, FAQs, blog, localization coverage, SEO settings |
+| **System** | Admin users, full RBAC permission matrix (9 roles × 13 resources × 6 permissions), audit logs with value diffs, API keys, integrations, webhooks, maintenance mode |
+
+### UX features
+Responsive collapsible sidebar · topbar with notifications & profile menu · global search + **⌘K command palette** · breadcrumbs · date-range picker · skeleton loaders · empty / error states · confirmation dialogs · toast notifications · detail drawers · CSV export everywhere.
+
+### Architecture
+```
+app/admin/                    # routes (handcrafted pages + catch-all renderer)
+components/ui/                # shadcn/ui-style primitives (dark casino theme)
+components/admin/layout/      # shell, sidebar, topbar, command palette
+components/admin/blocks/      # DataTable engine, stat cards, charts, drawers
+components/admin/charts/      # Recharts wrappers (area/bar/donut/rank/sparkline)
+lib/admin/nav.ts              # navigation tree (sidebar + breadcrumbs + palette)
+lib/admin/registry.tsx        # config-driven page specs for every nav item
+lib/admin/api.ts              # data-access layer — swap mock bodies for fetch()
+lib/admin/data/world.ts       # deterministic seeded mock data
+```
+
+The UI never touches mock data directly — it goes through `lib/admin/api.ts`,
+so connecting a real backend means replacing those function bodies with API
+calls. No fake blockchain/payment integrations: payment/crypto UI is purely
+interface-level with simulated data.
 
 ## Tech Stack
-- Next.js 14 + TypeScript (App Router)
-- Tailwind CSS
-- Framer Motion
-- Lucide React icons
-- Component-based architecture
-- Fully responsive desktop/tablet/mobile
+- Next.js 15 (App Router) + React 19 + TypeScript
+- Tailwind CSS + shadcn/ui-style components (Radix primitives)
+- Framer Motion micro-animations · Recharts analytics · Lucide icons
 
+## Getting Started
 
-## Getting Started Locally
-
-### 1. Clone the repo and checkout the branch
-```bash
-git clone https://github.com/0xdivi-code/shuffle-casino-frontend.git
-cd shuffle-casino-frontend
-git fetch origin
-git checkout arena/01a0d9de-shuffle-casino-frontend
-```
-
-If you already have the repo cloned:
-```bash
-git fetch origin
-git checkout arena/01a0d9de-shuffle-casino-frontend
-git pull origin arena/01a0d9de-shuffle-casino-frontend
-```
-
-### 2. Install dependencies
 ```bash
 npm install
-```
-
-### 3. Run dev server
-```bash
-npm run dev
-# App runs at http://localhost:3000
-```
-
-### 4. Build for production
-```bash
-npm run build
-npm run start
-```
-
-### 5. Pull latest changes (collaboration / updates)
-Every push to `arena/01a0d9de-shuffle-casino-frontend` can be pulled with:
-```bash
-git fetch origin
-git pull origin arena/01a0d9de-shuffle-casino-frontend
-# If you have local changes you want to discard:
-git reset --hard origin/arena/01a0d9de-shuffle-casino-frontend
-npm install
-npm run build
+npm run dev        # http://localhost:3000  (player site at /, admin at /admin)
+npm run build && npm run start
 ```
 
 ## Project Structure
 ```
-app/
-  page.tsx              – homepage assembling all sections (uses exact tokens)
-  layout.tsx            – root layout with Typekit vtz4hie.css + themeColor #7717ff
-  globals.css           – exact :root tokens + Aeonik @font-face + Typekit import
-  api/image-proxy/route.ts – proxy for hotlink/CORS
-components/
-  Header.tsx            – 76px height, black900 bg, gray700 border, sm1 radius
-  Sidebar.tsx
-  SafeImage.tsx
-  GameCard.tsx          – 8px radius, gray800 bg, 6px fav button
-  GameCarousel.tsx      – Countach headings, sm1 scroll buttons
-  PromotionBanner.tsx   – md radius
-  Hero.tsx
-  CategoryNav.tsx
-  ProvidersSection.tsx
-  AirdropSection.tsx
-  Footer.tsx
-  GameModal.tsx
-data/
-  games.ts (137)
-  promotions.ts (8)
-  gameSections.ts (6 sections)
-  navigation.ts
-  footerLinks.ts
-public/
-  assets/fallbacks/
+app/                  # player-facing casino pages
+app/admin/            # operator console
+components/           # player site components
+components/ui/        # shared design-system primitives
+components/admin/     # admin layout + blocks + charts
+data/                 # player site data (games, providers…)
+lib/admin/            # admin data layer, nav, registry
+public/assets/        # static assets
 ```
