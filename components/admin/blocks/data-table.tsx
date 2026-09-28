@@ -225,9 +225,9 @@ export function DataTable<T extends Record<string, unknown>>(props: DataTablePro
         <Table>
           <TableHeader>
             <TableRow>
-              {(bulkActions || rowDetail) && (
+              {bulkActions && (
                 <TableHead className="w-10">
-                  {bulkActions && <Checkbox checked={allSelected ? true : someSelected ? 'indeterminate' : false} onCheckedChange={toggleAll} aria-label="Select all" />}
+                  <Checkbox checked={allSelected ? true : someSelected ? 'indeterminate' : false} onCheckedChange={toggleAll} aria-label="Select all" />
                 </TableHead>
               )}
               {columns.map(c => (
@@ -249,7 +249,7 @@ export function DataTable<T extends Record<string, unknown>>(props: DataTablePro
             {loading && firstLoad.current ? (
               Array.from({ length: Math.min(pageSize, 8) }).map((_, i) => (
                 <TableRow key={i}>
-                  {(bulkActions || rowDetail) && <TableCell><div className="adm-skeleton h-4 w-4 rounded" /></TableCell>}
+                  {bulkActions && <TableCell><div className="adm-skeleton h-4 w-4 rounded" /></TableCell>}
                   {columns.map(c => (
                     <TableCell key={c.key} className={cn(c.hideBelow && hideCls[c.hideBelow])}>
                       <div className="adm-skeleton h-4 rounded" style={{ width: `${55 + ((i * 13 + c.key.length * 7) % 40)}%` }} />
@@ -274,9 +274,9 @@ export function DataTable<T extends Record<string, unknown>>(props: DataTablePro
                     className={cn('adm-row-hover', clickable && 'cursor-pointer', selected.has(rid) && 'bg-[rgba(139,92,246,0.13)]')}
                     onClick={() => clickable && onRowClick(row)}
                   >
-                    {(bulkActions || rowDetail) && (
+                    {bulkActions && (
                       <TableCell onClick={e => e.stopPropagation()}>
-                        {bulkActions ? <Checkbox checked={selected.has(rid)} onCheckedChange={() => toggleOne(rid)} aria-label="Select row" /> : null}
+                        <Checkbox checked={selected.has(rid)} onCheckedChange={() => toggleOne(rid)} aria-label="Select row" />
                       </TableCell>
                     )}
                     {columns.map(c => (
