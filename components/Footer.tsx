@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Branding column */}
           <div className="col-span-2 lg:col-span-2">
             <div className="flex flex-col gap-4">
-              <a href="/" title="Shuffle Casino" className="inline-flex">
+              <a href="/" title="Snuffle Casino" className="inline-flex">
                 <img 
-                  src="https://shuffle.com/icons/logo.svg" 
-                  alt="Shuffle logo" 
+                  src="https://i.postimg.cc/6QzR8npH/log0.png" 
+                  alt="Snuffle logo" 
                   height={24}
                   className="h-[24px] w-auto"
                 />
@@ -102,7 +102,7 @@ export default function Footer() {
               <li><a target="_blank" href="https://facebook.com/shufflefb" rel="noopener noreferrer" className="text-[#8b8ba7] hover:text-white text-[13px] transition-colors">Facebook</a></li>
               <li><a target="_blank" href="https://t.me/shufflecom" rel="noopener noreferrer" className="text-[#8b8ba7] hover:text-white text-[13px] transition-colors">Telegram</a></li>
               <li><a target="_blank" href="https://shuffle.store/" rel="noopener noreferrer" className="text-[#8b8ba7] hover:text-white text-[13px] transition-colors">Merch</a></li>
-              <li><a target="_blank" href="https://shufflecommunity.com" rel="noopener noreferrer" className="text-[#8b8ba7] hover:text-white text-[13px] transition-colors">Shuffle Forum</a></li>
+              <li><a target="_blank" href="https://shufflecommunity.com" rel="noopener noreferrer" className="text-[#8b8ba7] hover:text-white text-[13px] transition-colors">Snuffle Forum</a></li>
             </ul>
           </div>
 
@@ -142,7 +142,7 @@ export default function Footer() {
         {/* Description - matches screenshot exactly */}
         <div className="mt-10 pt-8 border-t border-[#1e1e2e]/40">
           <p className="text-[#6b7280] text-[12px] leading-[1.6]">
-            Shuffle is owned and operated by Natural Nine B.V., Curaçao company registration number 160998, with its registered address at Korporaalweg 10, Willemstad, Curaçao and is licensed by the Curaçao Gaming Control Board to offer games of chance under license number OGL/2024/1337/0628. Contact us at <a href="mailto:support@shuffle.com" className="text-[#8b8ba7] hover:text-white underline">support@shuffle.com</a>.
+            Snuffle is owned and operated by Natural Nine B.V., Curaçao company registration number 160998, with its registered address at Korporaalweg 10, Willemstad, Curaçao and is licensed by the Curaçao Gaming Control Board to offer games of chance under license number OGL/2024/1337/0628. Contact us at <a href="mailto:support@shuffle.com" className="text-[#8b8ba7] hover:text-white underline">support@shuffle.com</a>.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function Footer() {
             <span>1 ETH = $2,691.91</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-[#5a5a7a] text-[11px]">© 2026 Shuffle.com | All Rights Reserved</span>
+            <span className="text-[#5a5a7a] text-[11px]">© 2026 Snuffle.com | All Rights Reserved</span>
             <div className="flex items-center gap-2">
               <img 
                 src="/icons/eighteen-plus.svg" 

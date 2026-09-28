@@ -50,7 +50,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
             <div className="mx-auto w-full max-w-[1440px]">{children}</div>
           </main>
           <footer className="border-t border-adm-line px-5 py-3 text-center text-[11px] text-adm-dim">
-            Shuffle Operator Console · demo environment with simulated data · no real funds or personal data
+            Snuffle Operator Console · demo environment with simulated data · no real funds or personal data
           </footer>
         </div>
         <CommandPalette open={cmdOpen} onOpenChange={setCmdOpen} />

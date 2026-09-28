@@ -3,8 +3,8 @@ import { AdminShell } from '@/components/admin/layout/shell';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Shuffle Admin — Operator Console',
-    template: '%s · Shuffle Admin',
+    default: 'Snuffle Admin — Operator Console',
+    template: '%s · Snuffle Admin',
   },
   description: 'Casino operator control center: players, finance, games, risk, compliance and more. Demo environment with simulated data.',
   icons: {

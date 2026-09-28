@@ -100,9 +100,9 @@ export const VIP_LEVELS = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond I', 
 const TAGS = ['high-roller', 'bonus-hunter', 'crypto-native', 'slots-fan', 'live-casino', 'sports-bettor', 'churn-risk', 'winning-streak', 'referral', 'support-escalation'];
 const DEVICES = ['iPhone 15 Pro · Safari', 'Windows 11 · Chrome', 'Pixel 9 · Chrome', 'macOS · Firefox', 'Galaxy S24 · App', 'iPad Air · Safari', 'Windows 10 · Edge'];
 const GAME_NAMES = rawGames.map(g => g.title);
-const GAME_PROVIDERS = rawGames.map(g => g.provider || 'Shuffle Games');
+const GAME_PROVIDERS = rawGames.map(g => g.provider || 'Snuffle Games');
 
-export const PROVIDER_NAMES = Array.from(new Set([...GAME_PROVIDERS.filter(Boolean), 'Shuffle Games', 'Pragmatic Play', 'Evolution', 'NetEnt', 'Hacksaw Gaming', 'Play\u2019n GO', 'Push Gaming', 'Nolimit City', 'Big Time Gaming']))
+export const PROVIDER_NAMES = Array.from(new Set([...GAME_PROVIDERS.filter(Boolean), 'Snuffle Games', 'Pragmatic Play', 'Evolution', 'NetEnt', 'Hacksaw Gaming', 'Play\u2019n GO', 'Push Gaming', 'Nolimit City', 'Big Time Gaming']))
   .filter(Boolean).slice(0, 18) as string[];
 
 /* ------------------------------------------------------------------ core entities */
@@ -169,7 +169,7 @@ export const bets: Bet[] = Array.from({ length: 420 }, () => {
   return {
     id: `BT-${uid('', rnd, 9)}`,
     playerId: p.id, player: p.username,
-    game: GAME_NAMES[gi], provider: GAME_PROVIDERS[gi] || 'Shuffle Games',
+    game: GAME_NAMES[gi], provider: GAME_PROVIDERS[gi] || 'Snuffle Games',
     amount, payout: win ? Number((amount * multiplier).toFixed(2)) : 0, multiplier,
     result: win ? 'win' : 'loss',
     time: new Date(ADMIN_NOW - rndInt(rnd, 0, 30 * 24) * 3600000).toISOString(),
@@ -181,7 +181,7 @@ export const adminGames: AdminGame[] = rawGames.slice(0, 120).map((g, i) => {
   const statusRoll = rnd();
   return {
     id: g.id, title: g.title,
-    provider: g.provider || 'Shuffle Games',
+    provider: g.provider || 'Snuffle Games',
     category: g.isOriginal ? 'Originals' : pick(rnd, ['Slots', 'Slots', 'Slots', 'Live Casino', 'Table Games', 'Game Shows', 'Instant Win']),
     rtp: rndFloat(rnd, 93.2, 97.8, 1),
     status: statusRoll < 0.9 ? 'active' : statusRoll < 0.96 ? 'disabled' : 'maintenance',
@@ -439,7 +439,7 @@ export const integrations = [
 export const jackpots = Array.from({ length: 10 }, (_, i) => ({
   id: `JP-${i + 1}`,
   name: pick(rnd, ['Mega Fortune Wheel', 'Drops & Wins Mega', 'Royal Jackpot', 'Neon Millions', 'Daily Drop', 'Lightning Pot', 'Golden Sevens', 'Cosmic Cash']),
-  provider: pick(rnd, ['Pragmatic Play', 'NetEnt', 'Shuffle Games', 'Hacksaw Gaming']),
+  provider: pick(rnd, ['Pragmatic Play', 'NetEnt', 'Snuffle Games', 'Hacksaw Gaming']),
   amount: rndFloat(rnd, 8000, 4200000, 0),
   seed: rndFloat(rnd, 2000, 120000, 0),
   contribution: rndFloat(rnd, 0.5, 3.5, 2),

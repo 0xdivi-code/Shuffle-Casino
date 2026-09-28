@@ -4,8 +4,8 @@ import { AuthProvider } from '@/components/AuthContext';
 import ErrorSuppressor from '@/components/ErrorSuppressor';
 
 export const metadata: Metadata = {
-  title: 'Shuffle | Crypto Casino & Bitcoin Casino with Sportsbook',
-  description: 'Play Online Crypto Casino Games at Shuffle – 15,000+ games with provably fair Originals, top slots, live casino & game shows. Instant Bitcoin & crypto deposits, instant withdrawals, huge bonuses & VIP rewards!',
+  title: 'Snuffle | Crypto Casino & Bitcoin Casino with Sportsbook',
+  description: 'Play Online Crypto Casino Games at Snuffle – 15,000+ games with provably fair Originals, top slots, live casino & game shows. Instant Bitcoin & crypto deposits, instant withdrawals, huge bonuses & VIP rewards!',
   icons: {
     icon: 'https://shuffle.com/favicon.ico',
     shortcut: 'https://shuffle.com/favicon.ico',

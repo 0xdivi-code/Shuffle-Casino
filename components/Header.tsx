@@ -60,12 +60,12 @@ export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isC
             <div className="flex items-center">
               <CasinoSportsToggle />
             </div>
-            {/* Footer Shuffle Logo - aligned left, not center */}
-            <a title="Shuffle Casino" className="HeaderLogo_mobileLogoWrapper__jgM7c flex lg:hidden ml-1" href="/">
+            {/* Footer Snuffle Logo - aligned left, not center */}
+            <a title="Snuffle Casino" className="HeaderLogo_mobileLogoWrapper__jgM7c flex lg:hidden ml-1" href="/">
               <img alt="logo" height="28" src="/icons/logo-small.svg" className="h-[26px] w-auto block" />
             </a>
-            <a title="Shuffle Casino" aria-label="Home" className="HeaderLogo_desktopLogoWrapper__bmAcy hidden lg:flex items-center ml-2" href="/">
-              <img height="24" alt="Shuffle logo" src="https://shuffle.com/icons/logo.svg" className="h-[24px] w-auto block" />
+            <a title="Snuffle Casino" aria-label="Home" className="HeaderLogo_desktopLogoWrapper__bmAcy hidden lg:flex items-center ml-2" href="/">
+              <img height="24" alt="Snuffle logo" src="https://i.postimg.cc/6QzR8npH/log0.png" className="h-[24px] w-auto block" />
             </a>
           </div>
 
@@ -174,7 +174,7 @@ export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isC
                         <a className="ExpandMenuElement_menuItem__Isfin w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/transactions"><span className="ExpandMenuElement_menuIcon__8Vlj8 w-5 h-5 flex items-center justify-center"><img alt="transactions" src="/icons/transactions.svg" className="w-4 h-4" /></span>Transactions</a>
                         <button type="button" className="ExpandMenuElement_menuItem__Isfin w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="ExpandMenuElement_menuIcon__8Vlj8 w-5 h-5 flex items-center justify-center"><img alt="redeem" src="/icons/redeem-code.svg" className="w-4 h-4" /></span>Redeem Code</button>
                         <a className="ExpandMenuElement_menuItem__Isfin w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/settings/account"><span className="ExpandMenuElement_menuIcon__8Vlj8 w-5 h-5 flex items-center justify-center"><img alt="setting" src="/icons/setting.svg" className="w-4 h-4" /></span>Settings</a>
-                        <a className="ExpandMenuElement_menuItem__Isfin w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/shuffle-wise/self-exclusion"><span className="ExpandMenuElement_menuIcon__8Vlj8 w-5 h-5 flex items-center justify-center"><img alt="shuffle wise" src="/icons/shuffle-wise.svg" className="w-4 h-4" /></span>Shuffle Wise</a>
+                        <a className="ExpandMenuElement_menuItem__Isfin w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/shuffle-wise/self-exclusion"><span className="ExpandMenuElement_menuIcon__8Vlj8 w-5 h-5 flex items-center justify-center"><img alt="shuffle wise" src="/icons/shuffle-wise.svg" className="w-4 h-4" /></span>Snuffle Wise</a>
                         <button type="button" className="ExpandMenuElement_menuItem__Isfin w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="ExpandMenuElement_menuIcon__8Vlj8 w-5 h-5 flex items-center justify-center"><img alt="support" src="/icons/live-support.svg" className="w-4 h-4" /></span>Live Support</button>
                         <button onClick={signOut} className="ExpandMenuElement_menuItem__Isfin w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#f1323e] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left border-t border-[#2a2a3e]/60 mt-2" type="button"><img className="ExpandMenuElement_menuIcon__8Vlj8 w-5 h-5" alt="logout" src="/icons/logout.svg" />Logout</button>
                       </div>
@@ -211,12 +211,12 @@ export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isC
           <div className="flex items-center">
             <CasinoSportsToggle />
           </div>
-          {/* Footer Shuffle Logo - left aligned */}
-          <a title="Shuffle Casino" className="HeaderLogo_mobileLogoWrapper__jgM7c flex lg:hidden ml-1" href="/">
+          {/* Footer Snuffle Logo - left aligned */}
+          <a title="Snuffle Casino" className="HeaderLogo_mobileLogoWrapper__jgM7c flex lg:hidden ml-1" href="/">
             <img alt="logo" height="28" src="/icons/logo-small.svg" className="h-[26px] w-auto block" />
           </a>
-          <a title="Shuffle Casino" aria-label="Home" className="HeaderLogo_desktopLogoWrapper__bmAcy hidden lg:flex items-center ml-2" href="/">
-            <img height="24" alt="Shuffle logo" src="https://shuffle.com/icons/logo.svg" className="h-[24px] w-auto block" />
+          <a title="Snuffle Casino" aria-label="Home" className="HeaderLogo_desktopLogoWrapper__bmAcy hidden lg:flex items-center ml-2" href="/">
+            <img height="24" alt="Snuffle logo" src="https://i.postimg.cc/6QzR8npH/log0.png" className="h-[24px] w-auto block" />
           </a>
         </div>
 

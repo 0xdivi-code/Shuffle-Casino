@@ -28,7 +28,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#05D550",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -42,7 +42,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#E42735",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -56,7 +56,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#FD8C1A",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -70,7 +70,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#FD8C1A",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -84,7 +84,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#DF2079",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -98,7 +98,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#E33D4B",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -112,7 +112,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#ff1759",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -126,7 +126,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#00CDF2",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -140,7 +140,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#ff9c00",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -154,7 +154,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#e71ddc",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -168,7 +168,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#26B3EC",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -182,7 +182,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#5335FF",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -196,7 +196,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#9A61F7",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -210,7 +210,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#edb703",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -224,7 +224,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#03BF25",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -238,7 +238,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#8C26F0",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -252,7 +252,7 @@ export const games: Game[] = [
       fallback: "/assets/fallbacks/game.webp"
     },
     borderColor: "#4168E4",
-    provider: "Shuffle Games",
+    provider: "Snuffle Games",
     isOriginal: true
   },
   {
@@ -327,7 +327,7 @@ export const games: Game[] = [
   },
   {
     id: "pragmaticplay-shuffle-bonanza-2500",
-    title: "Shuffle Bonanza 2500",
+    title: "Snuffle Bonanza 2500",
     href: "/games/pragmaticplay-shuffle-bonanza-2500",
     image: {
       primary: "https://shuffle-com.imgix.net/b95f2f3f-d138-411f-81d7-1e2a32687d67?auto=format&width=3840",
@@ -593,7 +593,7 @@ export const games: Game[] = [
   },
   {
     id: "pragmaticplay-shuffle-lobby",
-    title: "Shuffle Live Lobby",
+    title: "Snuffle Live Lobby",
     href: "/games/pragmaticplay-shuffle-lobby",
     image: {
       primary: "https://shuffle-com.imgix.net/9faaefa1-8342-4076-b2f6-c44501da89ba?auto=format&width=3840",
@@ -635,7 +635,7 @@ export const games: Game[] = [
   },
   {
     id: "pragmaticplay-shuffle-blackjack-1",
-    title: "Shuffle Blackjack 1",
+    title: "Snuffle Blackjack 1",
     href: "/games/pragmaticplay-shuffle-blackjack-1",
     image: {
       primary: "https://shuffle-com.imgix.net/0bd085df-3b7e-4d50-9723-918a50f8b158?auto=format&width=3840",
@@ -677,7 +677,7 @@ export const games: Game[] = [
   },
   {
     id: "pragmaticplay-shuffle-vip-blackjack",
-    title: "Shuffle VIP Blackjack",
+    title: "Snuffle VIP Blackjack",
     href: "/games/pragmaticplay-shuffle-vip-blackjack",
     image: {
       primary: "https://shuffle-com.imgix.net/fc4449af-e54b-4ca2-861c-71f6fd27877a?auto=format&width=3840",
@@ -733,7 +733,7 @@ export const games: Game[] = [
   },
   {
     id: "pragmaticplay-shuffle-speed-blackjack-1",
-    title: "Shuffle Speed Blackjack 1",
+    title: "Snuffle Speed Blackjack 1",
     href: "/games/pragmaticplay-shuffle-speed-blackjack-1",
     image: {
       primary: "https://shuffle-com.imgix.net/9622e890-0245-4023-9d6b-093661c74059?auto=format&width=3840",
@@ -1559,7 +1559,7 @@ export const games: Game[] = [
   },
   {
     id: "hacksaw-shuffle-spinman",
-    title: "Shuffle Spinman",
+    title: "Snuffle Spinman",
     href: "/games/hacksaw-shuffle-spinman",
     image: {
       primary: "https://shuffle-com.imgix.net/a181bb0e-6e90-4477-b8a7-82f493973f73?auto=format&width=3840",

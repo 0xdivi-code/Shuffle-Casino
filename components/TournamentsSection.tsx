@@ -146,7 +146,7 @@ export default function TournamentsSection() {
                     </svg>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-[48px] h-[48px] bg-[#0a0a0f] rounded-full flex items-center justify-center border border-[#2a2a3e]">
-                        <img src="https://shuffle.com/icons/logo.svg" alt="S" className="w-6 h-6" />
+                        <img src="https://i.postimg.cc/6QzR8npH/log0.png" alt="S" className="w-6 h-6" />
                       </div>
                     </div>
                   </div>

@@ -15,7 +15,7 @@ export default function ConnectPage() {
             Connect <span className="text-[#7717ff]">API</span>
           </h1>
           <p className="text-[#8b8ba7] text-[16px] leading-[1.5] max-w-[600px]">
-            Integrate Shuffle casino frontend with your own backend. Get access to game data, promotions, and UI components. Contact the developer for documentation and keys.
+            Get access to game data, promotions, and Admin Panel. Contact the developer for documentation and keys.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function ConnectPage() {
           >
             <span className="flex items-center gap-3">
               <MessageCircle size={20} />
-              Contact Developer on Telegram
+              <span>Message Developer</span>
             </span>
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </a>

@@ -17,7 +17,7 @@ export default function Page() {
             <Construction size={28} className="text-[#5a5a7a]" />
           </div>
           <h2 className="text-white font-bold text-[18px] mb-2">Affiliate</h2>
-          <p className="text-[#8b8ba7] text-[14px] max-w-[400px] mx-auto mb-6">Earn commission promoting Shuffle - affiliate program.</p>
+          <p className="text-[#8b8ba7] text-[14px] max-w-[400px] mx-auto mb-6">Earn commission promoting Snuffle - affiliate program.</p>
           <a href="/" className="inline-flex items-center gap-2 h-[40px] px-5 bg-[#7717ff] hover:bg-[#8b3dff] text-white rounded-[8px] text-[13px] font-bold transition-colors">
             Back to Casino
           </a>

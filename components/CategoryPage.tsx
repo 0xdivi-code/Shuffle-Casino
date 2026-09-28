@@ -102,7 +102,7 @@ export default function CategoryPage({ title, games, backHref = "/", seoContent,
                 <div className="text-[11px] text-[#5a5a7a] px-2 py-1.5 uppercase tracking-wider">Providers</div>
                 <button onClick={() => { setShowProvidersDropdown(false); showError("Providers filter"); }} className="w-full text-left px-3 py-2 text-[13px] text-white bg-[#2a2a3e] rounded-[6px]">All Providers</button>
                 <div className="mt-1 space-y-0.5 max-h-[200px] overflow-auto">
-                  {["Pragmatic Play","Evolution","Hacksaw","Nolimit City","Shuffle Games","Relax Gaming"].map(p => (
+                  {["Pragmatic Play","Evolution","Hacksaw","Nolimit City","Snuffle Games","Relax Gaming"].map(p => (
                     <button key={p} onClick={() => { setShowProvidersDropdown(false); showError(p); }} className="w-full text-left px-3 py-2 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] rounded-[6px] transition-colors">{p}</button>
                   ))}
                 </div>

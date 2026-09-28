@@ -8,7 +8,7 @@ export default function Page() {
   const games = section ? section.games : [];
   return (
     <AppShell>
-      <CategoryPage title="Shuffle Picks" games={games} backHref="/" showProviders={true} />
+      <CategoryPage title="Snuffle Picks" games={games} backHref="/" showProviders={true} />
     </AppShell>
   );
 }

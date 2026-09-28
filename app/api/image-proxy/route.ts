@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
 
     const response = await fetch(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; Shuffle-Clone/1.0)',
+        'User-Agent': 'Mozilla/5.0 (compatible; Snuffle-Clone/1.0)',
         'Accept': 'image/*',
       },
     });

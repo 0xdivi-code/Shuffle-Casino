@@ -50,7 +50,7 @@ const getGamesByTitles = (titles: string[]): Game[] => {
 export const gameSections: GameSection[] = [
   {
     id: "shuffle-games",
-    title: "Shuffle Games",
+    title: "Snuffle Games",
     icon: "/icons/shuffle-logo.svg",
     href: "/casino/providers/shuffle-games",
     games: getGamesByTitles(["Dice", "Mines", "Keno", "Limbo", "Plinko", "Blackjack", "Coinflip", "Slide", "Floor Is Lava", "Blitz", "Hilo", "Waifu Tower", "Crash", "Chicken", "Baccarat", "Roulette", "Wheel"])
@@ -60,14 +60,14 @@ export const gameSections: GameSection[] = [
     title: "Slots",
     icon: "/icons/slots.svg",
     href: "/casino/categories/slots",
-    games: getGamesByTitles(["Demonic Dolls", "Sugar Rush Super Scatter", "Duck Hunters 2", "Gates of Olympus Super Scatter", "Le Prechaun", "Shuffle Bonanza 2500", "Outsourced 2", "Wanted Dead or a Wild", "Clash of Gods: Power Duel", "F* Louvre", "Minted Mike", "Duck Hunters", "The Luxe H.V.", "Frog N Loaded", "Le Digger", "The Big Dog House", "Thunderline Express: Hold and Win", "Alien X-vasion", "Soaked By Seamen", "Duck Hunters: Happy Hour", "Moon Rush", "SWOLL", "Le Bandit", "Sugar Merge Up"])
+    games: getGamesByTitles(["Demonic Dolls", "Sugar Rush Super Scatter", "Duck Hunters 2", "Gates of Olympus Super Scatter", "Le Prechaun", "Snuffle Bonanza 2500", "Outsourced 2", "Wanted Dead or a Wild", "Clash of Gods: Power Duel", "F* Louvre", "Minted Mike", "Duck Hunters", "The Luxe H.V.", "Frog N Loaded", "Le Digger", "The Big Dog House", "Thunderline Express: Hold and Win", "Alien X-vasion", "Soaked By Seamen", "Duck Hunters: Happy Hour", "Moon Rush", "SWOLL", "Le Bandit", "Sugar Merge Up"])
   },
   {
     id: "live-casino",
     title: "Live Casino",
     icon: "/icons/live-casino.svg",
     href: "/casino/categories/live-casino",
-    games: getGamesByTitles(["Shuffle Live Lobby", "Baccarat Lobby", "Roulette Lobby", "Shuffle Blackjack 1", "Gates of Olympus Roulette", "Playboy Roulette", "Shuffle VIP Blackjack", "Blackjack Live", "Baccarat Live", "Playboy Blackjack", "Shuffle Speed Blackjack 1", "Playboy Speed Baccarat 1", "Blackjack Lobby", "Lightning Roulette", "Speed Roulette", "Roulette Live", "Super Trunfo", "Ice Fishing", "Mega Roulette", "Lightning Storm", "Mega Sic Bac", "Super Andar Bahar", "Sweet Bonanza Candyland", "Playboy Speed Baccarat 2"])
+    games: getGamesByTitles(["Snuffle Live Lobby", "Baccarat Lobby", "Roulette Lobby", "Snuffle Blackjack 1", "Gates of Olympus Roulette", "Playboy Roulette", "Snuffle VIP Blackjack", "Blackjack Live", "Baccarat Live", "Playboy Blackjack", "Snuffle Speed Blackjack 1", "Playboy Speed Baccarat 1", "Blackjack Lobby", "Lightning Roulette", "Speed Roulette", "Roulette Live", "Super Trunfo", "Ice Fishing", "Mega Roulette", "Lightning Storm", "Mega Sic Bac", "Super Andar Bahar", "Sweet Bonanza Candyland", "Playboy Speed Baccarat 2"])
   },
   {
     id: "game-shows",
@@ -78,10 +78,10 @@ export const gameSections: GameSection[] = [
   },
   {
     id: "shuffle-picks",
-    title: "Shuffle Picks",
+    title: "Snuffle Picks",
     icon: "/icons/star.svg",
     href: "/casino/categories/shuffle-picks",
-    games: getGamesByTitles(["Brute Force: Alien Onslaught", "Fist of Destruction", "Preach TV", "7 Djinn Wishes", "De Rat Heist", "Le Fisherman", "Super Boosted Prizes: Hold and Win", "Farmageddon", "Flight Mode", "Rocket Reckon", "MLK Voyage 50000X", "Ice Vacation", "Strawberry Land", "Juicy Blades", "Bonsai Gold 2: Age of Prosperity", "Barbarossa Revenge", "In Jazz", "MLK Voyage", "Luna X", "Lucky And Brave Win Spins", "Retro Fruits 243 Fortune", "Shuffle Spinman", "Happy Bird", "Retro Tapes"])
+    games: getGamesByTitles(["Brute Force: Alien Onslaught", "Fist of Destruction", "Preach TV", "7 Djinn Wishes", "De Rat Heist", "Le Fisherman", "Super Boosted Prizes: Hold and Win", "Farmageddon", "Flight Mode", "Rocket Reckon", "MLK Voyage 50000X", "Ice Vacation", "Strawberry Land", "Juicy Blades", "Bonsai Gold 2: Age of Prosperity", "Barbarossa Revenge", "In Jazz", "MLK Voyage", "Luna X", "Lucky And Brave Win Spins", "Retro Fruits 243 Fortune", "Snuffle Spinman", "Happy Bird", "Retro Tapes"])
   },
   {
     id: "latest-releases",

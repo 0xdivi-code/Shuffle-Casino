@@ -63,7 +63,7 @@ export default function Sidebar({ isOpen, onClose, collapsed = false }: SidebarP
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1">
-                    <span className="text-white font-bold text-[14px]">Shuffle</span>
+                    <span className="text-white font-bold text-[14px]">Snuffle</span>
                     <span className="text-[#5a5a7a] text-[14px]">(SHFL)</span>
                   </div>
                   <div className="flex items-center gap-1.5">
@@ -174,7 +174,7 @@ export default function Sidebar({ isOpen, onClose, collapsed = false }: SidebarP
 
               <a href="/shuffle-picks" className={`flex items-center ${isCollapsed ? 'justify-center px-2 h-[40px]' : 'gap-3 px-3 h-[40px]'} rounded-[10px] text-[#8b8ba7] hover:text-white hover:bg-[#14141f] transition-colors`}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="flex-shrink-0"><circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 12L10 14L13 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><circle cx="14" cy="6" r="1" fill="#00d26a"/></svg>
-                {!isCollapsed && <span className="text-[14px] font-medium">Shuffle Picks</span>}
+                {!isCollapsed && <span className="text-[14px] font-medium">Snuffle Picks</span>}
               </a>
             </div>
 

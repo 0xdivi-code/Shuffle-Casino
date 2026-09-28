@@ -1865,7 +1865,7 @@ specs['cms/seo'] = {
     {
       title: 'Global metadata', desc: 'Defaults applied when a page does not define its own.',
       fields: [
-        { type: 'text', label: 'Title template', value: '%s | Shuffle Casino' },
+        { type: 'text', label: 'Title template', value: '%s | Snuffle Casino' },
         { type: 'text', label: 'Default description', value: 'Play 15,000+ casino games with instant crypto deposits.' },
         { type: 'switch', label: 'Generate JSON-LD structured data', value: true },
         { type: 'switch', label: 'Auto-generate canonical URLs', value: true },
@@ -2002,7 +2002,7 @@ specs['system/settings'] = {
     {
       title: 'Platform', desc: 'Core casino behavior.',
       fields: [
-        { type: 'text', label: 'Platform name', value: 'Shuffle Casino' },
+        { type: 'text', label: 'Platform name', value: 'Snuffle Casino' },
         { type: 'select', label: 'Default language', value: 'English', options: ['English', 'Portuguese', 'German', 'Japanese', 'Turkish'] },
         { type: 'switch', label: 'Enable registration', value: true },
         { type: 'switch', label: 'Require email verification', value: true },

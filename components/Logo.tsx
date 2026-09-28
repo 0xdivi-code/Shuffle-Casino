@@ -4,8 +4,8 @@ export default function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       <img 
-        src="https://shuffle.com/icons/logo.svg" 
-        alt="Shuffle" 
+        src="https://i.postimg.cc/6QzR8npH/log0.png" 
+        alt="Snuffle" 
         className="h-[24px] w-auto"
         onError={(e) => {
           // fallback to local

@@ -114,7 +114,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
                   <div className="AuthModal_authModalLeft__cZNrH hidden lg:flex lg:w-[50%] relative overflow-hidden bg-[#0a0a0f]">
                     <img className="AuthModal_backgroundImage__HSV1e absolute inset-0 w-full h-full object-cover" alt="auth-backdrop" src="https://shuffle.com/images/login-panel.jpg" />
                     <div className="AuthModal_backgroundGradient__R6sGB absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-black/30"></div>
-                    <img className="AuthModal_logo__Ididm absolute top-8 left-8 h-[28px] w-auto brightness-0 invert" alt="logo" src="https://shuffle.com/icons/logo.svg" />
+                    <img className="AuthModal_logo__Ididm absolute top-8 left-8 h-[28px] w-auto brightness-0 invert" alt="logo" src="https://i.postimg.cc/6QzR8npH/log0.png" />
                     <p className="AuthModal_terms__a6xZU absolute bottom-8 left-8 right-8 text-white/70 text-[12px] leading-[1.5] text-center">
                       By accessing the site, I attest that I am at least 18 years old and have read the&nbsp;
                       <a target="_blank" href="/info/terms" className="text-white underline">Terms and Conditions</a>
@@ -188,7 +188,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent" />
             <div className="relative z-10 flex flex-col justify-between w-full h-full p-8">
               <div>
-                <img src="https://shuffle.com/icons/logo.svg" alt="SHUFFLE" className="h-[28px] w-auto brightness-0 invert block" />
+                <img src="https://i.postimg.cc/6QzR8npH/log0.png" alt="SHUFFLE" className="h-[28px] w-auto brightness-0 invert block" />
               </div>
               <div className="flex-1 flex flex-col items-center justify-center gap-5 -mt-8">
                 <div className="flex items-center gap-5">
@@ -295,7 +295,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
                         <button type="button" onClick={() => setAgreeTerms(!agreeTerms)} className={`w-5 h-5 rounded-[4px] border flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${agreeTerms ? 'bg-[#7717ff] border-[#7717ff]' : 'bg-transparent border-[#2a2a3e] hover:border-[#3a3a4a]'}`}>
                           {agreeTerms && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><path d="M5 12l5 5l10 -10" /></svg>}
                         </button>
-                        <span className="text-white/80 text-[13px] leading-[1.4]">I agree to Shuffle&apos;s <a href="/info/terms" className="text-white font-bold underline">Terms of Service</a> and <a href="/info/privacy" className="text-white font-bold underline">Privacy Policy</a></span>
+                        <span className="text-white/80 text-[13px] leading-[1.4]">I agree to Snuffle&apos;s <a href="/info/terms" className="text-white font-bold underline">Terms of Service</a> and <a href="/info/privacy" className="text-white font-bold underline">Privacy Policy</a></span>
                       </div>
                       <button type="submit" className="w-full h-[48px] bg-[#7717ff] hover:bg-[#8b3dff] text-white rounded-[8px] text-[14px] font-bold transition-colors">Register</button>
                       <div className="text-center text-white text-[13px] py-2">Or continue with</div>

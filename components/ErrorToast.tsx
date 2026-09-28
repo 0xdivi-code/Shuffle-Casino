@@ -49,7 +49,7 @@ export default function ErrorToast({ message, isVisible, onClose, duration = 400
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-[10px] bg-white/20 hover:bg-white/30 px-2 py-1 rounded-full transition-colors"
                 >
-                  Contact
+                  Connect
                   <ExternalLink size={10} />
                 </a>
               </div>

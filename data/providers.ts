@@ -19,7 +19,7 @@ export const providers: Provider[] = [
   { id: "endorphina", name: "Endorphina", slug: "endorphina", imageId: "8c2da642-a1e2-4c9b-9880-304152bd9aeb", href: "/casino/providers/endorphina" },
   { id: "pragmatic-play-live", name: "Pragmatic Play Live", slug: "pragmatic-play-live", imageId: "d3ab714f-bf61-41a9-b709-b6c3baf12e15", href: "/casino/providers/pragmatic-play-live" },
   { id: "shady-lady", name: "ShadyLady", slug: "shady-lady", imageId: "610d2968-e6d8-40b2-a962-b28e42fe0941", href: "/casino/providers/shady-lady" },
-  { id: "shuffle-games", name: "Shuffle Games", slug: "shuffle-games", imageId: "347ddd8f-cd00-4564-a6be-fd03c1197755", href: "/casino/providers/shuffle-games" },
+  { id: "shuffle-games", name: "Snuffle Games", slug: "shuffle-games", imageId: "347ddd8f-cd00-4564-a6be-fd03c1197755", href: "/casino/providers/shuffle-games" },
   { id: "bgmng", name: "BGaming", slug: "bgmng", imageId: "758c2382-3aad-4a19-9ea7-419179da711f", href: "/casino/providers/bgmng" },
   { id: "relax", name: "Relax Gaming", slug: "relax", imageId: "e4b894ee-d113-49f1-932c-3dce911881c3", href: "/casino/providers/relax" },
   { id: "maxxilabs", name: "Maxxi Labs", slug: "maxxilabs", imageId: "15cf03e9-81ae-4014-9e22-71b5f1a111c8", href: "/casino/providers/maxxilabs" },

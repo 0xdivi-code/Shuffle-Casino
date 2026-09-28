@@ -1,15 +1,13 @@
-# Shuffle Casino — Frontend + Operator Console
+# Snuffle Casino — Frontend + Admin Console
 
 This repository contains two products:
 
 1. **Player-facing casino** (`/`) — the crypto casino & sportsbook lobby.
-2. **Casino Admin Panel** (`/admin`) — a production-quality operator control center.
+2. **Casino Admin Panel** (`/admin`) — a production-quality control center.
 
 <img width="1680" alt="Casino Admin Panel" src="https://github.com/user-attachments/assets/fcd52930-cfac-43a3-8f66-8d7998ba89b4" />
 
 ## Casino Admin Panel (`/admin`)
-
-A dark-first, enterprise-grade operator platform covering the full casino stack:
 
 | Module | Highlights |
 | --- | --- |
@@ -27,9 +25,6 @@ A dark-first, enterprise-grade operator platform covering the full casino stack:
 | **CMS** | Homepage rails, pages, menus, FAQs, blog, localization coverage, SEO settings |
 | **System** | Admin users, full RBAC permission matrix (9 roles × 13 resources × 6 permissions), audit logs with value diffs, API keys, integrations, webhooks, maintenance mode |
 
-### UX features
-Responsive collapsible sidebar · topbar with notifications & profile menu · global search + **⌘K command palette** · breadcrumbs · date-range picker · skeleton loaders · empty / error states · confirmation dialogs · toast notifications · detail drawers · CSV export everywhere.
-
 ### Architecture
 ```
 app/admin/                    # routes (handcrafted pages + catch-all renderer)
@@ -40,13 +35,8 @@ components/admin/charts/      # Recharts wrappers (area/bar/donut/rank/sparkline
 lib/admin/nav.ts              # navigation tree (sidebar + breadcrumbs + palette)
 lib/admin/registry.tsx        # config-driven page specs for every nav item
 lib/admin/api.ts              # data-access layer — swap mock bodies for fetch()
-lib/admin/data/world.ts       # deterministic seeded mock data
+lib/admin/data/world.ts      
 ```
-
-The UI never touches mock data directly — it goes through `lib/admin/api.ts`,
-so connecting a real backend means replacing those function bodies with API
-calls. No fake blockchain/payment integrations: payment/crypto UI is purely
-interface-level with simulated data.
 
 ## Tech Stack
 - Next.js 15 (App Router) + React 19 + TypeScript

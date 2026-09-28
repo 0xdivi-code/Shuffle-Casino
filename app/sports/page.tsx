@@ -9,7 +9,7 @@ export default function SportsPage() {
           <div className="w-16 h-16 bg-[#1e1e2e] rounded-full flex items-center justify-center mx-auto mb-5 border border-[#2a2a3e]">
             <span className="text-[28px]">🏈</span>
           </div>
-          <h2 className="text-white font-bold text-[22px] mb-3 tracking-tight">Sportsbook - Get Sportsbook Connected Here</h2>
+          <h2 className="text-white font-bold text-[22px] mb-3 tracking-tight">Sportsbook </h2>
           <p className="text-[#8b8ba7] text-[14px] leading-[1.6] max-w-[520px] mx-auto mb-2">
             The Sportsbook module is currently disconnected. To integrate live odds, betslip, and wallet connectivity, please message the developer.
           </p>
@@ -24,7 +24,7 @@ export default function SportsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 h-[44px] px-6 bg-[#7717ff] hover:bg-[#8b3dff] text-white rounded-[10px] text-[13px] font-bold transition-colors shadow-[0_4px_20px_rgba(119,23,255,0.3)]"
             >
-              <span>Message Developer</span>
+              <span>Buy Complete Code</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L7 12L13 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
             <a href="/" className="inline-flex h-[44px] px-6 bg-[#1e1e2e] border border-[#2a2a3e] hover:bg-[#2a2a3e] text-white rounded-[10px] items-center font-bold text-[13px] transition-colors">

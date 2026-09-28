@@ -2,10 +2,10 @@
 export default function LatestSEO() {
   return (
     <article className="prose prose-invert max-w-none">
-      <h2 className="text-white text-[20px] lg:text-[22px] font-bold mb-4 tracking-tight">Discover the Newest Releases on Shuffle Casino</h2>
+      <h2 className="text-white text-[20px] lg:text-[22px] font-bold mb-4 tracking-tight">Discover the Newest Releases on Snuffle Casino</h2>
       <div className="text-[#8b8ba7] text-[14px] leading-[1.7] space-y-4">
         <p>
-          Stay ahead of the game with the freshest titles hitting Shuffle Casino. Our Latest Releases section brings you the hottest new slots, innovative mechanics, and immersive experiences from top-tier providers like Pragmatic Play, Hacksaw Gaming, Nolimit City, and more.
+          Stay ahead of the game with the freshest titles hitting Snuffle Casino. Our Latest Releases section brings you the hottest new slots, innovative mechanics, and immersive experiences from top-tier providers like Pragmatic Play, Hacksaw Gaming, Nolimit City, and more.
         </p>
         <p>
           From high-volatility thrillers to feature-packed adventures, every new drop is carefully curated to deliver cutting-edge gameplay, stunning visuals, and massive win potential. Whether you&apos;re chasing big multipliers or exploring new themes, you&apos;ll find your next favorite here first.
@@ -30,7 +30,7 @@ export default function LatestSEO() {
             </tbody>
           </table>
         </div>
-        <h3 className="text-white font-bold text-[16px] mt-8 mb-3">Why Play New Releases on Shuffle?</h3>
+        <h3 className="text-white font-bold text-[16px] mt-8 mb-3">Why Play New Releases on Snuffle?</h3>
         <ul className="list-disc pl-5 space-y-2 marker:text-[#5a5a7a]">
           <li><span className="text-white font-medium">Exclusive Early Access</span> – Be the first to spin the newest titles before anyone else.</li>
           <li><span className="text-white font-medium">Provably Fair + Licensed Providers</span> – All games from certified studios with RNG tested mechanics.</li>
