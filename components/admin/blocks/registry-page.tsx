@@ -20,7 +20,11 @@ import { cn } from '@/lib/admin/utils';
 export function RegistryPage({ spec }: { spec: PageSpec }) {
   const [stats, setStats] = React.useState<StatSpec[] | null>(spec.stats ? null : []);
   React.useEffect(() => {
+    document.title = `${spec.title} · Shuffle Admin`;
+  }, [spec]);
+  React.useEffect(() => {
     if (!spec.stats) return;
+    setStats(null);
     const t = setTimeout(() => setStats(spec.stats!), 420);
     return () => clearTimeout(t);
   }, [spec]);
