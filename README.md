@@ -3,9 +3,11 @@
 This repository contains two products:
 
 1. **Player-facing casino** (`/`) — the crypto casino & sportsbook lobby.
+<img width="1680" height="945" alt="Screenshot 2026-09-28 at 17 09 24" src="https://github.com/user-attachments/assets/e952103c-4816-485c-ba30-4e7d23d963a1" />
+ 
 2. **Casino Admin Panel** (`/admin`) — a production-quality control center.
+<img width="1680" height="945" alt="Screenshot 2026-09-28 at 17 09 45" src="https://github.com/user-attachments/assets/d1f7edb0-08ce-44e7-a41c-8915f49ea40c" />
 
-<img width="1680" alt="Casino Admin Panel" src="https://github.com/user-attachments/assets/fcd52930-cfac-43a3-8f66-8d7998ba89b4" />
 
 ## Casino Admin Panel (`/admin`)
 
