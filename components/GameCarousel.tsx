@@ -62,7 +62,7 @@ export default function GameCarousel({ title, games, icon, href, showViewAll = t
               View all
             </a>
           )}
-          <div className="hidden sm:flex items-center gap-1">
+          <div className="flex items-center gap-1">
             <button
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}

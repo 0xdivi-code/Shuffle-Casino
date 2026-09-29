@@ -52,14 +52,14 @@ export default function Sidebar({ isOpen, onClose, collapsed = false }: SidebarP
           {isCollapsed ? (
             <div className="p-2 border-b border-[#1e1e2e]/60 flex justify-center">
               <div className="w-10 h-10 rounded-full bg-[#1e1e2e] border border-[#2a2a3e] flex items-center justify-center overflow-hidden">
-                <img src="https://shuffle.com/icons/token.svg" alt="SHFL" className="w-7 h-7" />
+                <img src="https://shuffle.com/icons/token.svg" alt="SHFL" className="w-7 h-7" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/token.svg'; } }} />
               </div>
             </div>
           ) : (
             <div className="p-3 border-b border-[#1e1e2e]/60">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-full bg-[#1e1e2e] border border-[#2a2a3e] flex items-center justify-center overflow-hidden">
-                  <img src="https://shuffle.com/icons/token.svg" alt="SHFL Token" className="w-7 h-7" />
+                  <img src="https://shuffle.com/icons/token.svg" alt="SHFL Token" className="w-7 h-7" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/token.svg'; } }} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1">

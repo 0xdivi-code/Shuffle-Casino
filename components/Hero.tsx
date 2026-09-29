@@ -45,13 +45,13 @@ export default function Hero() {
         {/* Arrows */}
         <button
           onClick={() => scroll('left')}
-          className={`absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#0e0e15]/80 backdrop-blur-xl border border-[#23233a] text-white flex items-center justify-center shadow-xl opacity-0 group-hover/hero:opacity-100 transition-all hover:bg-[#1a1a27] hover:scale-105 ${!canScrollLeft ? '!hidden' : ''}`}
+          className={`absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#0e0e15]/80 backdrop-blur-xl border border-[#23233a] text-white flex items-center justify-center shadow-xl opacity-100 sm:opacity-0 sm:group-hover/hero:opacity-100 transition-all hover:bg-[#1a1a27] hover:scale-105 ${!canScrollLeft ? '!hidden' : ''}`}
         >
           <ChevronLeft size={18} />
         </button>
         <button
           onClick={() => scroll('right')}
-          className={`absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#0e0e15]/80 backdrop-blur-xl border border-[#23233a] text-white flex items-center justify-center shadow-xl opacity-0 group-hover/hero:opacity-100 transition-all hover:bg-[#1a1a27] hover:scale-105 ${!canScrollRight ? '!hidden' : ''}`}
+          className={`absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#0e0e15]/80 backdrop-blur-xl border border-[#23233a] text-white flex items-center justify-center shadow-xl opacity-100 sm:opacity-0 sm:group-hover/hero:opacity-100 transition-all hover:bg-[#1a1a27] hover:scale-105 ${!canScrollRight ? '!hidden' : ''}`}
         >
           <ChevronRight size={18} />
         </button>

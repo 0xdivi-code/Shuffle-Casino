@@ -56,7 +56,7 @@ export default function HomePage() {
       <div className="flex max-w-[1920px] mx-auto">
         <Sidebar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} collapsed={isCollapsed} />
         
-        <main className="flex-1 min-w-0 overflow-hidden">
+        <main className="flex-1 min-w-0 overflow-hidden pb-[72px] lg:pb-0">
           <div className="px-3 lg:px-6 py-4 lg:py-6 max-w-[1440px] mx-auto w-full">
             <Hero />
             <CategoryNav />
@@ -89,17 +89,28 @@ export default function HomePage() {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0e0e15]/95 backdrop-blur-xl border-t border-[#1e1e2e] z-30 px-2 py-2 safe-area-pb">
         <div className="flex justify-around">
           {[
-            { label: 'Casino', active: true, icon: '🎰' },
-            { label: 'Sports', active: false, icon: '⚽' },
-            { label: 'Airdrop', active: false, icon: '🪂' },
-            { label: 'VIP', active: false, icon: '👑' },
-            { label: 'Menu', active: false, icon: '☰' },
+            { label: 'Casino', active: true, icon: '🎰', href: '/' },
+            { label: 'Sports', active: false, icon: '⚽', href: '/sports' },
+            { label: 'Airdrop', active: false, icon: '🪂', href: '/airdrop' },
+            { label: 'VIP', active: false, icon: '👑', href: '/vip' },
           ].map(item => (
-            <button key={item.label} className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl ${item.active ? 'text-white bg-[#1a1a27]' : 'text-[#5a5a7a]'}`}>
+            <a
+              key={item.label}
+              href={item.href}
+              className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl ${item.active ? 'text-white bg-[#1a1a27]' : 'text-[#5a5a7a]'}`}
+            >
               <span className="text-[18px]">{item.icon}</span>
               <span className="text-[10px] font-medium">{item.label}</span>
-            </button>
+            </a>
           ))}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(true)}
+            className="flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl text-[#5a5a7a]"
+          >
+            <span className="text-[18px]">☰</span>
+            <span className="text-[10px] font-medium">Menu</span>
+          </button>
         </div>
       </div>
 
