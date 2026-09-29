@@ -12,6 +12,8 @@ import ErrorToast from '@/components/ErrorToast';
 import AuthModal from '@/components/AuthModal';
 import WalletModal from '@/components/WalletModal';
 import VaultModal from '@/components/VaultModal';
+import NotificationsSidebar from '@/components/NotificationsSidebar';
+import RedeemCodeModal from '@/components/RedeemCodeModal';
 import { gameSections } from '@/data/gameSections';
 import { Crown, Dices, Goal, Menu, Rocket } from 'lucide-react';
 
@@ -24,6 +26,8 @@ export default function HomePage() {
   const [authTab, setAuthTab] = useState<'login' | 'register'>('login');
   const [walletOpen, setWalletOpen] = useState(false);
   const [vaultOpen, setVaultOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [redeemOpen, setRedeemOpen] = useState(false);
 
   const showError = (gameTitle?: string) => {
     const messages = [
@@ -58,6 +62,8 @@ export default function HomePage() {
         onRegisterClick={openRegister}
         onWalletClick={() => setWalletOpen(true)}
         onVaultClick={() => setVaultOpen(true)}
+        onNotificationsClick={() => setNotificationsOpen(true)}
+        onRedeemClick={() => setRedeemOpen(true)}
       />
       
       <div className="flex max-w-[1920px] mx-auto">
@@ -131,6 +137,8 @@ export default function HomePage() {
       <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} initialTab={authTab} />
       <WalletModal isOpen={walletOpen} onClose={() => setWalletOpen(false)} />
       <VaultModal isOpen={vaultOpen} onClose={() => setVaultOpen(false)} />
+      <NotificationsSidebar isOpen={notificationsOpen} onClose={() => setNotificationsOpen(false)} />
+      <RedeemCodeModal isOpen={redeemOpen} onClose={() => setRedeemOpen(false)} />
     </div>
   );
 }

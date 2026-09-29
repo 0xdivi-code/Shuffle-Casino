@@ -11,6 +11,8 @@ interface HeaderProps {
   onRegisterClick: () => void;
   onWalletClick: () => void;
   onVaultClick: () => void;
+  onNotificationsClick: () => void;
+  onRedeemClick: () => void;
 }
 
 function CasinoSportsToggle({ className = '' }: { className?: string }) {
@@ -50,7 +52,7 @@ function IconButtons() {
   );
 }
 
-function UserMenu({ username, signOut, onWalletClick, onVaultClick }: { username: string; signOut: () => void; onWalletClick: () => void; onVaultClick: () => void }) {
+function UserMenu({ username, signOut, onWalletClick, onVaultClick, onNotificationsClick, onRedeemClick }: { username: string; signOut: () => void; onWalletClick: () => void; onVaultClick: () => void; onNotificationsClick: () => void; onRedeemClick: () => void }) {
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   return (
@@ -74,7 +76,7 @@ function UserMenu({ username, signOut, onWalletClick, onVaultClick }: { username
                 </div>
                 <hr className="border-[#2a2a3e] my-3" />
                 <span className="flex items-center gap-2 text-[12px] text-[#8b8ba7] mb-3">
-                  <span><img alt="vip icon" width="16" height="16" src="/images/vip/unranked.svg" className="w-4 h-4" /></span>
+                  <span><img alt="vip icon" width="16" height="16" src="https://shuffle.com/images/vip/unranked.svg" onError={(event) => { const target = event.currentTarget; if (!target.dataset.fallback) { target.dataset.fallback = 'true'; target.src = '/images/vip/unranked.svg'; } }} className="w-4 h-4" /></span>
                   <span>Unranked</span>
                 </span>
                 <div className="w-full">
@@ -86,7 +88,7 @@ function UserMenu({ username, signOut, onWalletClick, onVaultClick }: { username
                       <span><span className="text-[#8b8ba7]">0.00%</span></span>
                       <span className="flex items-center">
                         <span className="flex items-center gap-1.5">
-                          <span><img alt="vip icon" width="16" height="16" src="/images/vip/wood.svg" className="w-4 h-4" /></span>
+                          <span><img alt="vip icon" width="16" height="16" src="https://shuffle.com/images/vip/wood.svg" onError={(event) => { const target = event.currentTarget; if (!target.dataset.fallback) { target.dataset.fallback = 'true'; target.src = '/images/vip/wood.svg'; } }} className="w-4 h-4" /></span>
                           <span className="text-[#8b8ba7]">Wood</span>
                         </span>
                       </span>
@@ -100,9 +102,9 @@ function UserMenu({ username, signOut, onWalletClick, onVaultClick }: { username
                 <button type="button" onClick={() => { setShowUserMenu(false); onVaultClick(); }} className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="w-5 h-5 flex items-center justify-center"><img alt="lock" src="/icons/shield-lock.svg" className="w-4 h-4" /></span>Vault</button>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/token"><span className="w-5 h-5 flex items-center justify-center"><img alt="token" src="/icons/token-white.svg" className="w-4 h-4" /></span>Token</a>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/affiliate/overview"><span className="w-5 h-5 flex items-center justify-center"><img alt="affiliate" src="/icons/affiliate.svg" className="w-4 h-4" /></span>Affiliate Program</a>
-                <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/notifications"><span className="w-5 h-5 flex items-center justify-center"><img alt="notifications" src="/icons/notifications.svg" className="w-4 h-4" /></span>Notifications</a>
+                <button type="button" onClick={() => { setShowUserMenu(false); onNotificationsClick(); }} className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="w-5 h-5 flex items-center justify-center"><img alt="notifications" src="https://shuffle.com/icons/notification-gold.svg" onError={(event) => { const target = event.currentTarget; if (!target.dataset.fallback) { target.dataset.fallback = 'true'; target.src = '/icons/notification-gold.svg'; } }} className="w-[18px] h-[18px]" /></span>Notifications</button>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/transactions"><span className="w-5 h-5 flex items-center justify-center"><img alt="transactions" src="/icons/transactions.svg" className="w-4 h-4" /></span>Transactions</a>
-                <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/redeem"><span className="w-5 h-5 flex items-center justify-center"><img alt="redeem" src="/icons/redeem-code.svg" className="w-4 h-4" /></span>Redeem Code</a>
+                <button type="button" onClick={() => { setShowUserMenu(false); onRedeemClick(); }} className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="w-5 h-5 flex items-center justify-center"><img alt="redeem" src="/icons/redeem-code.svg" className="w-4 h-4" /></span>Redeem Code</button>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/settings/account"><span className="w-5 h-5 flex items-center justify-center"><img alt="setting" src="/icons/setting.svg" className="w-4 h-4" /></span>Settings</a>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/shuffle-wise/self-exclusion"><span className="w-5 h-5 flex items-center justify-center"><img alt="shuffle wise" src="/icons/shuffle-wise.svg" className="w-4 h-4" /></span>Shuffle Wise</a>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/support"><span className="w-5 h-5 flex items-center justify-center"><img alt="support" src="/icons/live-support.svg" className="w-4 h-4" /></span>Live Support</a>
@@ -116,7 +118,7 @@ function UserMenu({ username, signOut, onWalletClick, onVaultClick }: { username
   );
 }
 
-export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isCollapsed, onLoginClick, onRegisterClick, onWalletClick, onVaultClick }: HeaderProps) {
+export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isCollapsed, onLoginClick, onRegisterClick, onWalletClick, onVaultClick, onNotificationsClick, onRedeemClick }: HeaderProps) {
   const { user, profile, signOut } = useAuth();
 
   const handleHamburgerClick = () => {
@@ -194,7 +196,7 @@ export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isC
                 <IconButtons />
               </div>
 
-              <UserMenu username={username} signOut={signOut} onWalletClick={onWalletClick} onVaultClick={onVaultClick} />
+              <UserMenu username={username} signOut={signOut} onWalletClick={onWalletClick} onVaultClick={onVaultClick} onNotificationsClick={onNotificationsClick} onRedeemClick={onRedeemClick} />
             </div>
           ) : (
             <div className="order-3 lg:order-4 ml-auto flex items-center gap-2 sm:gap-3">
