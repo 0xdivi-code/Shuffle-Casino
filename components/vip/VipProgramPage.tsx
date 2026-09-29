@@ -43,11 +43,32 @@ const benefits = [
 
 const benefitRanks = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Jade', 'Sapphire', 'Ruby', 'Diamond'];
 
+function VipRankIcon({ slug, className, size }: { slug: string; className: string; size: number }) {
+  const useShuffleAsset = slug === 'wood' || slug === 'unranked';
+  const source = useShuffleAsset ? `https://shuffle.com/images/vip/${slug}.svg` : `/images/vip/${slug}.svg`;
+
+  return (
+    <img
+      src={source}
+      alt={`${slug} VIP icon`}
+      width={size}
+      height={size}
+      className={className}
+      onError={(event) => {
+        const target = event.currentTarget;
+        if (!target.dataset.fallback) {
+          target.dataset.fallback = 'true';
+          target.src = `/images/vip/${slug}.svg`;
+        }
+      }}
+    />
+  );
+}
+
 function RankBadge({ slug, label, compact = false }: { slug: string; label?: string; compact?: boolean }) {
-  const source = `/images/vip/${slug}.svg`;
   return (
     <span className={`inline-flex items-center ${label ? 'gap-2' : ''}`}>
-      <img src={source} alt={`${slug} VIP icon`} width={compact ? 18 : 22} height={compact ? 18 : 22} className={compact ? 'h-[18px] w-[18px]' : 'h-[22px] w-[22px]'} />
+      <VipRankIcon slug={slug} size={compact ? 18 : 22} className={compact ? 'h-[18px] w-[18px]' : 'h-[22px] w-[22px]'} />
       {label && <span>{label}</span>}
     </span>
   );
@@ -208,7 +229,7 @@ export default function VipProgramPage() {
                 </div>
                 <div>
                   <h2 className="text-[18px] font-bold text-white">{username}</h2>
-                  <span className="mt-1 flex items-center gap-1.5 text-[11px] text-[#8d8da2]"><img alt="vip icon" src="/images/vip/unranked.svg" className="h-4 w-4" />Unranked</span>
+                  <span className="mt-1 flex items-center gap-1.5 text-[11px] text-[#8d8da2]"><VipRankIcon slug="unranked" size={16} className="h-4 w-4" />Unranked</span>
                 </div>
               </div>
 
@@ -218,8 +239,8 @@ export default function VipProgramPage() {
                   <div className="h-full w-0 bg-[#7717ff]" />
                 </div>
                 <div className="mt-2.5 flex items-center justify-between text-[11px] text-[#85859a]">
-                  <span className="flex items-center gap-1.5"><img src="/images/vip/unranked.svg" alt="unranked" className="h-4 w-4" />Unranked</span>
-                  <span className="flex items-center gap-1.5"><img src="/images/vip/wood.svg" alt="wood" className="h-4 w-4" />Wood</span>
+                  <span className="flex items-center gap-1.5"><VipRankIcon slug="unranked" size={16} className="h-4 w-4" />Unranked</span>
+                  <span className="flex items-center gap-1.5"><VipRankIcon slug="wood" size={16} className="h-4 w-4" />Wood</span>
                 </div>
               </div>
 
