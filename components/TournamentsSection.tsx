@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight, Trophy } from 'lucide-react';
+import { ChevronLeft, ChevronRight, DollarSign, Medal, TrendingUp, Trophy, User } from 'lucide-react';
 
 interface Tournament {
   id: string;
@@ -168,18 +168,24 @@ export default function TournamentsSection() {
                   {t.leaderboard.map((entry, idx) => (
                     <div key={idx} className="px-3 py-1">
                       <div className="flex items-center gap-1.5 mb-1">
-                        <span className="text-[14px]">{entry.rank === '1st' ? '🏆' : entry.rank === '2nd' ? '🥈' : '🥉'}</span>
+                        {entry.rank === '1st' ? (
+                          <Trophy size={14} className="text-[#f2b93b]" />
+                        ) : entry.rank === '2nd' ? (
+                          <Medal size={14} className="text-[#c7ccd6]" />
+                        ) : (
+                          <Medal size={14} className="text-[#c9825a]" />
+                        )}
                         <span className="text-white text-[13px] font-bold">{entry.rank}</span>
                       </div>
                       <div className="flex items-center gap-1.5 mb-1">
-                        <span className="w-4 h-4 rounded-full bg-[#1e1e2e] flex items-center justify-center text-[10px]">👤</span>
+                        <span className="w-4 h-4 rounded-full bg-[#1e1e2e] flex items-center justify-center"><User size={10} className="text-[#8b8ba7]" /></span>
                         <span className="text-[#8b8ba7] text-[12px] truncate">{entry.user}</span>
                       </div>
                       <div className="flex items-center gap-1 text-[#00d26a] text-[13px] font-medium">
                         {entry.icon === 'usd' ? (
-                          <span className="w-4 h-4 rounded-full bg-[#00d26a]/20 flex items-center justify-center text-[10px]">$</span>
+                          <span className="w-4 h-4 rounded-full bg-[#00d26a]/20 flex items-center justify-center"><DollarSign size={10} className="text-[#00d26a]" /></span>
                         ) : (
-                          <span className="w-4 h-4 rounded border border-[#8b5cf6]/50 flex items-center justify-center text-[8px]">📈</span>
+                          <span className="w-4 h-4 rounded border border-[#8b5cf6]/50 flex items-center justify-center"><TrendingUp size={10} className="text-[#8b5cf6]" /></span>
                         )}
                         <span className="truncate">{entry.prize}</span>
                       </div>

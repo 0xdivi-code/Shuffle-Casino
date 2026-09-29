@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Gem } from 'lucide-react';
 import GameCard from './GameCard';
 import { Game } from '@/data/games';
 
@@ -50,7 +50,7 @@ export default function GameCarousel({ title, games, icon, href, showViewAll = t
         <div className="flex items-center gap-3">
           {icon && (
             <div className="w-6 h-6 rounded-lg bg-[#1e1e2e] flex items-center justify-center">
-              <span className="text-[#7717ff] text-sm">◆</span>
+              <Gem size={14} className="text-[#7717ff]" />
             </div>
           )}
           <h2 className="text-white font-bold text-[18px] sm:text-[20px] tracking-tight" style={{ fontFamily: 'Aeonik' }}>{title}</h2>
@@ -62,7 +62,7 @@ export default function GameCarousel({ title, games, icon, href, showViewAll = t
               View all
             </a>
           )}
-          <div className="hidden sm:flex items-center gap-1">
+          <div className="flex items-center gap-1">
             <button
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}

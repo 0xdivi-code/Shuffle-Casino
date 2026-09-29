@@ -108,13 +108,13 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
             data-testid="modal-content-AUTH"
             className="ModalContent_modalContent__rbnMN GlobalModal_authModalContent__wj48B relative w-full h-[100dvh] lg:h-[768px] lg:max-w-[1000px] bg-[#0e0e15] lg:rounded-[16px] overflow-hidden flex shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
           >
-            <div className="" style={{ transition: 'height 0.1s ease-out', height: '768px', width: '100%' }}>
-              <div className="w-full h-full">
+            <div className="w-full h-full">
+              <div className="w-full h-full overflow-y-auto">
                 <div className="AuthModal_desktop__UyUut flex w-full h-full">
                   <div className="AuthModal_authModalLeft__cZNrH hidden lg:flex lg:w-[50%] relative overflow-hidden bg-[#0a0a0f]">
-                    <img className="AuthModal_backgroundImage__HSV1e absolute inset-0 w-full h-full object-cover" alt="auth-backdrop" src="https://shuffle.com/images/login-panel.jpg" />
+                    <img className="AuthModal_backgroundImage__HSV1e absolute inset-0 w-full h-full object-cover" alt="auth-backdrop" src="https://shuffle.com/images/login-panel.jpg" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/images/login-panel.jpg'; } }} />
                     <div className="AuthModal_backgroundGradient__R6sGB absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-black/30"></div>
-                    <img className="AuthModal_logo__Ididm absolute top-8 left-8 h-[28px] w-auto brightness-0 invert" alt="logo" src="https://i.postimg.cc/6QzR8npH/log0.png" />
+                    <img className="AuthModal_logo__Ididm absolute top-8 left-8 h-[28px] w-auto brightness-0 invert" alt="logo" src="https://i.postimg.cc/6QzR8npH/log0.png" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/logo.svg'; } }} />
                     <p className="AuthModal_terms__a6xZU absolute bottom-8 left-8 right-8 text-white/70 text-[12px] leading-[1.5] text-center">
                       By accessing the site, I attest that I am at least 18 years old and have read the&nbsp;
                       <a target="_blank" href="/info/terms" className="text-white underline">Terms and Conditions</a>
@@ -183,18 +183,18 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
           </button>
 
           <div className="hidden lg:flex lg:w-[50%] relative overflow-hidden bg-[#0a0a0f]">
-            <img src="https://shuffle.com/images/login-panel.jpg" alt="auth-backdrop" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="https://shuffle.com/images/login-panel.jpg" alt="auth-backdrop" className="absolute inset-0 w-full h-full object-cover" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/images/login-panel.jpg'; } }} />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-black/30" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent" />
             <div className="relative z-10 flex flex-col justify-between w-full h-full p-8">
               <div>
-                <img src="https://i.postimg.cc/6QzR8npH/log0.png" alt="SHUFFLE" className="h-[28px] w-auto brightness-0 invert block" />
+                <img src="https://i.postimg.cc/6QzR8npH/log0.png" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/logo.svg'; } }} alt="SHUFFLE" className="h-[28px] w-auto brightness-0 invert block" />
               </div>
               <div className="flex-1 flex flex-col items-center justify-center gap-5 -mt-8">
                 <div className="flex items-center gap-5">
-                  <img src="https://shuffle.com/icons/shuffle-logo.svg" alt="S" className="w-[64px] h-[64px] object-contain block" onError={(e) => { (e.target as HTMLImageElement).src = "https://shuffle.com/icons/token.svg"; }} />
+                  <img src="https://shuffle.com/icons/shuffle-logo.svg" alt="S" className="w-[64px] h-[64px] object-contain block" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/token-white.svg'; } }} />
                   <div className="w-px h-[44px] bg-white/20" />
-                  <img src="https://shuffle.com/images/partners/sunderland-afc.svg" alt="Sunderland A.F.C" className="w-[68px] h-[68px] object-contain block" />
+                  <img src="https://shuffle.com/images/partners/sunderland-afc.svg" alt="Sunderland A.F.C" className="w-[68px] h-[68px] object-contain block" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 </div>
                 <img src="https://shuffle.com/icons/premier-league.svg" alt="Premier League" className="h-[36px] w-auto mt-2 brightness-0 invert opacity-90 block" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                 <div className="flex items-center gap-2 -mt-2">
@@ -246,13 +246,13 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
                       <div className="text-center text-white text-[13px] py-2">Or continue with</div>
                       <div className="grid grid-cols-3 gap-3">
                         <button type="button" onClick={handleGoogleSignIn} disabled={googleLoading} className="h-[48px] bg-transparent border border-[#2a2a3e] hover:border-[#3a3a4a] hover:bg-[#1e1e2e] rounded-[8px] flex items-center justify-center transition-colors disabled:opacity-50">
-                          <img src="/icons/brands/google.svg" alt="Google" width={20} height={20} className="w-5 h-5 block" />
+                          <img src="https://shuffle.com/icons/brands/google.svg" alt="Google" width={20} height={20} className="w-5 h-5 block" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/brands/google.svg'; } }} />
                         </button>
                         <button type="button" className="h-[48px] bg-transparent border border-[#2a2a3e] hover:border-[#3a3a4a] hover:bg-[#1e1e2e] rounded-[8px] flex items-center justify-center transition-colors">
-                          <img src="/icons/brands/line.svg" alt="LINE" width={20} height={20} className="w-5 h-5 block" />
+                          <img src="https://shuffle.com/icons/brands/line.svg" alt="LINE" width={20} height={20} className="w-5 h-5 block" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/brands/line.svg'; } }} />
                         </button>
                         <button type="button" className="h-[48px] bg-transparent border border-[#2a2a3e] hover:border-[#3a3a4a] hover:bg-[#1e1e2e] rounded-[8px] flex items-center justify-center transition-colors">
-                          <img src="/icons/brands/telegram.svg" alt="Telegram" width={20} height={20} className="w-5 h-5 block" />
+                          <img src="https://shuffle.com/icons/brands/telegram.svg" alt="Telegram" width={20} height={20} className="w-5 h-5 block" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/brands/telegram.svg'; } }} />
                         </button>
                       </div>
                       {!getSupabase() && <p className="text-[11px] text-[#5a5a7a] text-center mt-3">Supabase not configured - using mock auth for demo. Set NEXT_PUBLIC_SUPABASE_URL and ANON_KEY in .env</p>}
@@ -301,13 +301,13 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
                       <div className="text-center text-white text-[13px] py-2">Or continue with</div>
                       <div className="grid grid-cols-3 gap-3">
                         <button type="button" onClick={handleGoogleSignIn} disabled={googleLoading} className="h-[48px] bg-transparent border border-[#2a2a3e] hover:border-[#3a3a4a] hover:bg-[#1e1e2e] rounded-[8px] flex items-center justify-center transition-colors disabled:opacity-50">
-                          <img src="/icons/brands/google.svg" alt="Google" width={20} height={20} className="w-5 h-5 block" />
+                          <img src="https://shuffle.com/icons/brands/google.svg" alt="Google" width={20} height={20} className="w-5 h-5 block" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/brands/google.svg'; } }} />
                         </button>
                         <button type="button" className="h-[48px] bg-transparent border border-[#2a2a3e] hover:border-[#3a3a4a] hover:bg-[#1e1e2e] rounded-[8px] flex items-center justify-center transition-colors">
-                          <img src="/icons/brands/line.svg" alt="LINE" width={20} height={20} className="w-5 h-5 block" />
+                          <img src="https://shuffle.com/icons/brands/line.svg" alt="LINE" width={20} height={20} className="w-5 h-5 block" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/brands/line.svg'; } }} />
                         </button>
                         <button type="button" className="h-[48px] bg-transparent border border-[#2a2a3e] hover:border-[#3a3a4a] hover:bg-[#1e1e2e] rounded-[8px] flex items-center justify-center transition-colors">
-                          <img src="/icons/brands/telegram.svg" alt="Telegram" width={20} height={20} className="w-5 h-5 block" />
+                          <img src="https://shuffle.com/icons/brands/telegram.svg" alt="Telegram" width={20} height={20} className="w-5 h-5 block" onError={(e) => { const t = e.currentTarget; if (!t.dataset.fallback) { t.dataset.fallback = '1'; t.src = '/icons/brands/telegram.svg'; } }} />
                         </button>
                       </div>
                     </form>

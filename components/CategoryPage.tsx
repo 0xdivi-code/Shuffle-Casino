@@ -90,10 +90,10 @@ export default function CategoryPage({ title, games, backHref = "/", seoContent,
           </div>
         </div>
 
-        <div className="GamesToolbar_filtersWrapper__x3y2z flex gap-3 items-center">
+        <div className="GamesToolbar_filtersWrapper__x3y2z flex flex-wrap gap-3 items-center">
           {/* All Providers dropdown - SelectMultiple */}
           <div className="SelectMultiple_root__m9n8b relative">
-            <button onClick={() => setShowProvidersDropdown(!showProvidersDropdown)} className="SelectMultiple_button__k2l3m flex items-center justify-between gap-3 h-[40px] px-4 bg-[#14141f] border border-[#1e1e2e] rounded-[10px] text-[13px] text-[#8b8ba7] hover:text-white hover:border-[#2a2a3e] transition-colors min-w-[160px]">
+            <button onClick={() => setShowProvidersDropdown(!showProvidersDropdown)} className="SelectMultiple_button__k2l3m flex items-center justify-between gap-3 h-[40px] px-4 bg-[#14141f] border border-[#1e1e2e] rounded-[10px] text-[13px] text-[#8b8ba7] hover:text-white hover:border-[#2a2a3e] transition-colors min-w-[140px] sm:min-w-[160px]">
               <span>All Providers</span>
               <img src="/icons/chevron.svg" alt="chevron" width="16" height="16" className={`w-4 h-4 transition-transform ${showProvidersDropdown ? 'rotate-180' : ''}`} />
             </button>
@@ -113,8 +113,8 @@ export default function CategoryPage({ title, games, backHref = "/", seoContent,
           {/* Sort by - Select */}
           <div className="Select_root__a1s2d relative">
             <div className="Select_formWrapper__b3c4d flex items-center gap-2">
-              <span className="text-[13px] text-[#5a5a7a] hidden lg:block">Sort by:</span>
-              <button onClick={() => setShowSort(!showSort)} className="Select_button__c5d6e flex items-center gap-2 h-[40px] px-4 bg-[#14141f] border border-[#1e1e2e] rounded-[10px] text-[13px] text-white hover:border-[#2a2a3e] transition-colors min-w-[160px] justify-between">
+              <span className="text-[12px] sm:text-[13px] text-[#5a5a7a] whitespace-nowrap">Sort by:</span>
+              <button onClick={() => setShowSort(!showSort)} className="Select_button__c5d6e flex items-center gap-2 h-[40px] px-4 bg-[#14141f] border border-[#1e1e2e] rounded-[10px] text-[13px] text-white hover:border-[#2a2a3e] transition-colors min-w-[140px] sm:min-w-[160px] justify-between">
                 <span className="font-medium">{sortBy}</span>
                 <img src="/icons/chevron.svg" alt="chevron" width="16" height="16" className={`w-4 h-4 transition-transform ${showSort ? 'rotate-180' : ''}`} />
               </button>

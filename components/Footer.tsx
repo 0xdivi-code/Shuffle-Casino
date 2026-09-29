@@ -10,12 +10,19 @@ export default function Footer() {
           {/* Branding column */}
           <div className="col-span-2 lg:col-span-2">
             <div className="flex flex-col gap-4">
-              <a href="/" title="Snuffle Casino" className="inline-flex">
+              <a href="/" title="Snuffle Casino" className="inline-flex mt-1 mb-1">
                 <img 
                   src="https://i.postimg.cc/6QzR8npH/log0.png" 
                   alt="Snuffle logo" 
                   height={24}
-                  className="h-[24px] w-auto"
+                  className="h-[24px] w-auto object-contain object-left"
+                  onError={(e) => {
+                    const t = e.currentTarget;
+                    if (!t.dataset.fallback) {
+                      t.dataset.fallback = '1';
+                      t.src = '/icons/logo.svg';
+                    }
+                  }}
                 />
               </a>
               
@@ -34,6 +41,7 @@ export default function Footer() {
                     height={48}
                     className="w-[48px] h-[48px] object-contain"
                     loading="lazy"
+                    onError={(e) => (e.currentTarget.style.display = 'none')}
                   />
                 </a>
                 <p className="text-[#8b8ba7] text-[13px] leading-[1.3]">
@@ -107,7 +115,7 @@ export default function Footer() {
           </div>
 
           {/* Language and Odds selectors - matches screenshot */}
-          <div className="col-span-2 lg:col-span-1 flex flex-col gap-3">
+          <div className="hidden lg:flex col-span-1 flex-col gap-3">
             <div className="relative">
               <button className="w-full flex items-center justify-between bg-[#14141f] border border-[#1e1e2e] rounded-[8px] px-4 h-[44px] text-[13px] text-white hover:border-[#2a2a3e] transition-colors">
                 <span>English</span>
@@ -166,7 +174,7 @@ export default function Footer() {
       </div>
 
       {/* Floating support button like in screenshot */}
-      <div className="fixed bottom-6 right-6 z-30">
+      <div className="fixed bottom-24 lg:bottom-6 right-4 sm:right-6 z-40">
         <button className="w-12 h-12 bg-[#7717ff] hover:bg-[#8b3dff] rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(119,23,255,0.4)] transition-colors">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
             <path d="M3 18v-6a9 9 0 0 1 18 0v6" />

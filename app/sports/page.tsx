@@ -1,5 +1,6 @@
 "use client";
 import AppShell from '@/components/AppShell';
+import { Goal } from 'lucide-react';
 
 export default function SportsPage() {
   return (
@@ -7,7 +8,7 @@ export default function SportsPage() {
       <div className="w-full max-w-[800px] mx-auto">
         <div className="bg-[#14141f] border border-[#1e1e2e] rounded-[16px] p-8 lg:p-12 text-center shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
           <div className="w-16 h-16 bg-[#1e1e2e] rounded-full flex items-center justify-center mx-auto mb-5 border border-[#2a2a3e]">
-            <span className="text-[28px]">🏈</span>
+            <Goal size={30} className="text-[#7717ff]" />
           </div>
           <h2 className="text-white font-bold text-[22px] mb-3 tracking-tight">Sportsbook </h2>
           <p className="text-[#8b8ba7] text-[14px] leading-[1.6] max-w-[520px] mx-auto mb-2">
