@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Search } from 'lucide-react';
 
 type TabId = 'LOBBY' | 'ORIGINALS' | 'SLOTS' | 'LIVE_CASINO' | 'TABLE_GAMES';
 
@@ -70,7 +71,10 @@ export default function CategoryNav() {
             <span className="InputSuffix_root__oj7G6 absolute right-1 top-1/2 -translate-y-1/2 flex items-center">
               <span className="Home_searchHotkeyBadge__bjQiH">
                 <button aria-label="Search" type="button" className="ButtonVariants_root__EFlHO ButtonVariants_buttonHeightXSmall__CLrw0 ButtonVariants_tertiary__LojiE h-[28px] px-2.5 bg-[#1e1e2e] border border-[#2a2a3e] rounded-[6px] text-[#8b8ba7] text-[11px] font-medium hover:bg-[#2a2a3e] hover:text-white transition-colors flex items-center justify-center">
-                  <span className="ButtonVariants_buttonContent__mRPrs">⌘ K</span>
+                  <span className="ButtonVariants_buttonContent__mRPrs">
+                    <Search size={14} className="sm:hidden" />
+                    <span className="hidden sm:flex">⌘ K</span>
+                  </span>
                 </button>
               </span>
             </span>

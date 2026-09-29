@@ -11,6 +11,7 @@ import ProvidersSection from '@/components/ProvidersSection';
 import ErrorToast from '@/components/ErrorToast';
 import AuthModal from '@/components/AuthModal';
 import { gameSections } from '@/data/gameSections';
+import { Crown, Dices, Goal, Menu, Rocket } from 'lucide-react';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,26 +90,27 @@ export default function HomePage() {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0e0e15]/95 backdrop-blur-xl border-t border-[#1e1e2e] z-30 px-2 py-2 safe-area-pb">
         <div className="flex justify-around">
           {[
-            { label: 'Casino', active: true, icon: '🎰', href: '/' },
-            { label: 'Sports', active: false, icon: '⚽', href: '/sports' },
-            { label: 'Airdrop', active: false, icon: '🪂', href: '/airdrop' },
-            { label: 'VIP', active: false, icon: '👑', href: '/vip' },
-          ].map(item => (
+            { label: 'Casino', active: true, Icon: Dices, href: '/' },
+            { label: 'Sports', active: false, Icon: Goal, href: '/sports' },
+            { label: 'Airdrop', active: false, Icon: Rocket, href: '/airdrop' },
+            { label: 'VIP', active: false, Icon: Crown, href: '/vip' },
+          ].map(({ label, active, Icon, href }) => (
             <a
-              key={item.label}
-              href={item.href}
-              className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl ${item.active ? 'text-white bg-[#1a1a27]' : 'text-[#5a5a7a]'}`}
+              key={label}
+              href={href}
+              className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-colors ${active ? 'text-white bg-[#1a1a27]' : 'text-[#5a5a7a] hover:text-white'}`}
             >
-              <span className="text-[18px]">{item.icon}</span>
-              <span className="text-[10px] font-medium">{item.label}</span>
+              <Icon size={20} strokeWidth={active ? 2.2 : 1.8} />
+              <span className="text-[10px] font-medium">{label}</span>
             </a>
           ))}
           <button
             type="button"
             onClick={() => setIsMenuOpen(true)}
-            className="flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl text-[#5a5a7a]"
+            aria-label="Open menu"
+            className="flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl text-[#5a5a7a] hover:text-white transition-colors"
           >
-            <span className="text-[18px]">☰</span>
+            <Menu size={20} strokeWidth={1.8} />
             <span className="text-[10px] font-medium">Menu</span>
           </button>
         </div>
