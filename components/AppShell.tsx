@@ -4,12 +4,20 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import AuthModal from './AuthModal';
+import WalletModal from './WalletModal';
+import VaultModal from './VaultModal';
+import NotificationsSidebar from './NotificationsSidebar';
+import RedeemCodeModal from './RedeemCodeModal';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [authTab, setAuthTab] = useState<'login' | 'register'>('login');
+  const [walletOpen, setWalletOpen] = useState(false);
+  const [vaultOpen, setVaultOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [redeemOpen, setRedeemOpen] = useState(false);
 
   const openLogin = () => {
     setAuthTab('login');
@@ -29,6 +37,10 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         isCollapsed={isCollapsed}
         onLoginClick={openLogin}
         onRegisterClick={openRegister}
+        onWalletClick={() => setWalletOpen(true)}
+        onVaultClick={() => setVaultOpen(true)}
+        onNotificationsClick={() => setNotificationsOpen(true)}
+        onRedeemClick={() => setRedeemOpen(true)}
       />
       <div className="flex max-w-[1920px] mx-auto">
         <Sidebar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} collapsed={isCollapsed} />
@@ -40,6 +52,10 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         </main>
       </div>
       <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} initialTab={authTab} />
+      <WalletModal isOpen={walletOpen} onClose={() => setWalletOpen(false)} />
+      <VaultModal isOpen={vaultOpen} onClose={() => setVaultOpen(false)} />
+      <NotificationsSidebar isOpen={notificationsOpen} onClose={() => setNotificationsOpen(false)} />
+      <RedeemCodeModal isOpen={redeemOpen} onClose={() => setRedeemOpen(false)} />
     </div>
   );
 }
