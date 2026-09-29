@@ -10,6 +10,7 @@ interface HeaderProps {
   onLoginClick: () => void;
   onRegisterClick: () => void;
   onWalletClick: () => void;
+  onVaultClick: () => void;
 }
 
 function CasinoSportsToggle({ className = '' }: { className?: string }) {
@@ -49,7 +50,7 @@ function IconButtons() {
   );
 }
 
-function UserMenu({ username, signOut, onWalletClick }: { username: string; signOut: () => void; onWalletClick: () => void }) {
+function UserMenu({ username, signOut, onWalletClick, onVaultClick }: { username: string; signOut: () => void; onWalletClick: () => void; onVaultClick: () => void }) {
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   return (
@@ -96,7 +97,7 @@ function UserMenu({ username, signOut, onWalletClick }: { username: string; sign
               <div className="py-2 border-t border-[#2a2a3e]/60 max-h-[390px] overflow-y-auto scrollbar-thin">
                 <button type="button" onClick={() => { setShowUserMenu(false); onWalletClick(); }} className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="w-5 h-5 flex items-center justify-center"><img alt="wallet" src="/icons/wallet.svg" className="w-4 h-4" /></span>Wallet</button>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/vip-program"><span className="w-5 h-5 flex items-center justify-center"><img alt="crown" src="/icons/crown.svg" className="w-4 h-4" /></span>VIP</a>
-                <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/vault"><span className="w-5 h-5 flex items-center justify-center"><img alt="lock" src="/icons/shield-lock.svg" className="w-4 h-4" /></span>Vault</a>
+                <button type="button" onClick={() => { setShowUserMenu(false); onVaultClick(); }} className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="w-5 h-5 flex items-center justify-center"><img alt="lock" src="/icons/shield-lock.svg" className="w-4 h-4" /></span>Vault</button>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/token"><span className="w-5 h-5 flex items-center justify-center"><img alt="token" src="/icons/token-white.svg" className="w-4 h-4" /></span>Token</a>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/affiliate/overview"><span className="w-5 h-5 flex items-center justify-center"><img alt="affiliate" src="/icons/affiliate.svg" className="w-4 h-4" /></span>Affiliate Program</a>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/notifications"><span className="w-5 h-5 flex items-center justify-center"><img alt="notifications" src="/icons/notifications.svg" className="w-4 h-4" /></span>Notifications</a>
@@ -115,7 +116,7 @@ function UserMenu({ username, signOut, onWalletClick }: { username: string; sign
   );
 }
 
-export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isCollapsed, onLoginClick, onRegisterClick, onWalletClick }: HeaderProps) {
+export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isCollapsed, onLoginClick, onRegisterClick, onWalletClick, onVaultClick }: HeaderProps) {
   const { user, profile, signOut } = useAuth();
 
   const handleHamburgerClick = () => {
@@ -193,7 +194,7 @@ export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isC
                 <IconButtons />
               </div>
 
-              <UserMenu username={username} signOut={signOut} onWalletClick={onWalletClick} />
+              <UserMenu username={username} signOut={signOut} onWalletClick={onWalletClick} onVaultClick={onVaultClick} />
             </div>
           ) : (
             <div className="order-3 lg:order-4 ml-auto flex items-center gap-2 sm:gap-3">

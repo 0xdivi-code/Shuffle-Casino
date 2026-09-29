@@ -1,3 +1,5 @@
 import AffiliateOverview from '@/components/account/AffiliateOverview';
 
-export default AffiliateOverview;
+export default function AffiliateOverviewPage() {
+  return <AffiliateOverview />;
+}

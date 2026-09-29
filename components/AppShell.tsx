@@ -5,6 +5,7 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 import AuthModal from './AuthModal';
 import WalletModal from './WalletModal';
+import VaultModal from './VaultModal';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +13,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const [authOpen, setAuthOpen] = useState(false);
   const [authTab, setAuthTab] = useState<'login' | 'register'>('login');
   const [walletOpen, setWalletOpen] = useState(false);
+  const [vaultOpen, setVaultOpen] = useState(false);
 
   const openLogin = () => {
     setAuthTab('login');
@@ -32,6 +34,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         onLoginClick={openLogin}
         onRegisterClick={openRegister}
         onWalletClick={() => setWalletOpen(true)}
+        onVaultClick={() => setVaultOpen(true)}
       />
       <div className="flex max-w-[1920px] mx-auto">
         <Sidebar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} collapsed={isCollapsed} />
@@ -44,6 +47,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       </div>
       <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} initialTab={authTab} />
       <WalletModal isOpen={walletOpen} onClose={() => setWalletOpen(false)} />
+      <VaultModal isOpen={vaultOpen} onClose={() => setVaultOpen(false)} />
     </div>
   );
 }
