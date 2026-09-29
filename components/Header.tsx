@@ -9,6 +9,7 @@ interface HeaderProps {
   isCollapsed: boolean;
   onLoginClick: () => void;
   onRegisterClick: () => void;
+  onWalletClick: () => void;
 }
 
 function CasinoSportsToggle({ className = '' }: { className?: string }) {
@@ -48,7 +49,7 @@ function IconButtons() {
   );
 }
 
-function UserMenu({ username, signOut }: { username: string; signOut: () => void }) {
+function UserMenu({ username, signOut, onWalletClick }: { username: string; signOut: () => void; onWalletClick: () => void }) {
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   return (
@@ -93,7 +94,7 @@ function UserMenu({ username, signOut }: { username: string; signOut: () => void
                 </div>
               </a>
               <div className="py-2 border-t border-[#2a2a3e]/60 max-h-[390px] overflow-y-auto scrollbar-thin">
-                <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/wallet"><span className="w-5 h-5 flex items-center justify-center"><img alt="wallet" src="/icons/wallet.svg" className="w-4 h-4" /></span>Wallet</a>
+                <button type="button" onClick={() => { setShowUserMenu(false); onWalletClick(); }} className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors text-left"><span className="w-5 h-5 flex items-center justify-center"><img alt="wallet" src="/icons/wallet.svg" className="w-4 h-4" /></span>Wallet</button>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/vip-program"><span className="w-5 h-5 flex items-center justify-center"><img alt="crown" src="/icons/crown.svg" className="w-4 h-4" /></span>VIP</a>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/vault"><span className="w-5 h-5 flex items-center justify-center"><img alt="lock" src="/icons/shield-lock.svg" className="w-4 h-4" /></span>Vault</a>
                 <a className="w-full flex items-center gap-3 px-4 py-3 text-[13px] text-[#8b8ba7] hover:text-white hover:bg-[#2a2a3e] transition-colors" href="/token"><span className="w-5 h-5 flex items-center justify-center"><img alt="token" src="/icons/token-white.svg" className="w-4 h-4" /></span>Token</a>
@@ -114,7 +115,7 @@ function UserMenu({ username, signOut }: { username: string; signOut: () => void
   );
 }
 
-export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isCollapsed, onLoginClick, onRegisterClick }: HeaderProps) {
+export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isCollapsed, onLoginClick, onRegisterClick, onWalletClick }: HeaderProps) {
   const { user, profile, signOut } = useAuth();
 
   const handleHamburgerClick = () => {
@@ -172,19 +173,19 @@ export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isC
             <div className="order-3 lg:order-4 ml-auto flex items-center gap-2 lg:gap-3">
               <div className="flex items-center gap-2">
                 <div className="relative">
-                  <a href="/wallet" className="flex items-center gap-2 h-9 lg:h-10 px-2.5 lg:px-3 bg-[#1e1e2e] border border-[#2a2a3e] rounded-[10px] hover:bg-[#2a2a3e] transition-colors" id="balance-button">
+                  <button type="button" onClick={onWalletClick} className="flex items-center gap-2 h-9 lg:h-10 px-2.5 lg:px-3 bg-[#1e1e2e] border border-[#2a2a3e] rounded-[10px] hover:bg-[#2a2a3e] transition-colors" id="balance-button">
                     <img className="w-4 h-4 rounded-full" alt="ETH" width="16" height="16" src="/icons/crypto/eth.svg" />
                     <span className="text-white text-[13px] font-medium hidden sm:flex">
                       <span className="formatted-amount-value" data-testid="balance">0.00000000</span>
                     </span>
                     <span className="sm:hidden text-white text-[12px] font-medium">0.00</span>
                     <img alt="arrow" className="w-3 h-3 opacity-60" src="/icons/chevron.svg" />
-                  </a>
+                  </button>
                 </div>
-                <a href="/wallet" id="wallet-btn" className="h-9 lg:h-10 px-3 lg:px-4 bg-[#7717ff] hover:bg-[#8b3dff] text-white rounded-[10px] flex items-center gap-2 text-[13px] font-bold transition-colors flex-shrink-0">
+                <button type="button" onClick={onWalletClick} id="wallet-btn" className="h-9 lg:h-10 px-3 lg:px-4 bg-[#7717ff] hover:bg-[#8b3dff] text-white rounded-[10px] flex items-center gap-2 text-[13px] font-bold transition-colors flex-shrink-0">
                   <img alt="wallet" width="16" height="16" src="/icons/wallet.svg" className="w-4 h-4" />
                   <span className="hidden lg:block font-bold">Wallet</span>
-                </a>
+                </button>
               </div>
 
               {/* Desktop quick actions */}
@@ -192,7 +193,7 @@ export default function Header({ onMenuToggle, onCollapseToggle, isMenuOpen, isC
                 <IconButtons />
               </div>
 
-              <UserMenu username={username} signOut={signOut} />
+              <UserMenu username={username} signOut={signOut} onWalletClick={onWalletClick} />
             </div>
           ) : (
             <div className="order-3 lg:order-4 ml-auto flex items-center gap-2 sm:gap-3">
